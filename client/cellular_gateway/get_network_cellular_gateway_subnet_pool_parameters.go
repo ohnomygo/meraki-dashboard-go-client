@@ -61,7 +61,10 @@ GetNetworkCellularGatewaySubnetPoolParams contains all the parameters to send to
 */
 type GetNetworkCellularGatewaySubnetPoolParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

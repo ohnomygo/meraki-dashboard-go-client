@@ -64,7 +64,10 @@ type CreateNetworkApplianceVlanParams struct {
 	// CreateNetworkApplianceVlan.
 	CreateNetworkApplianceVlan CreateNetworkApplianceVlanBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -80,7 +80,10 @@ type GetOrganizationConfigurationChangesParams struct {
 	*/
 	NetworkID *string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* PerPage.

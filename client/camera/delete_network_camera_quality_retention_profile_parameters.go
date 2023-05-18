@@ -61,10 +61,16 @@ DeleteNetworkCameraQualityRetentionProfileParams contains all the parameters to 
 */
 type DeleteNetworkCameraQualityRetentionProfileParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// QualityRetentionProfileID.
+	/* QualityRetentionProfileID.
+
+	   Quality retention profile ID
+	*/
 	QualityRetentionProfileID string
 
 	timeout    time.Duration

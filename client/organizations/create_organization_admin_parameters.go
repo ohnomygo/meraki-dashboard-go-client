@@ -64,7 +64,10 @@ type CreateOrganizationAdminParams struct {
 	// CreateOrganizationAdmin.
 	CreateOrganizationAdmin CreateOrganizationAdminBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

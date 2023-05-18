@@ -64,7 +64,10 @@ type ClaimIntoOrganizationParams struct {
 	// ClaimIntoOrganization.
 	ClaimIntoOrganization ClaimIntoOrganizationBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

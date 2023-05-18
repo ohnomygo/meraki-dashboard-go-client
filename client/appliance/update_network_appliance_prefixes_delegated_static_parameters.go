@@ -61,10 +61,16 @@ UpdateNetworkAppliancePrefixesDelegatedStaticParams contains all the parameters 
 */
 type UpdateNetworkAppliancePrefixesDelegatedStaticParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// StaticDelegatedPrefixID.
+	/* StaticDelegatedPrefixID.
+
+	   Static delegated prefix ID
+	*/
 	StaticDelegatedPrefixID string
 
 	// UpdateNetworkAppliancePrefixesDelegatedStatic.

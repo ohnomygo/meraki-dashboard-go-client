@@ -61,10 +61,16 @@ UpdateNetworkAppliancePortParams contains all the parameters to send to the API 
 */
 type UpdateNetworkAppliancePortParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// PortID.
+	/* PortID.
+
+	   Port ID
+	*/
 	PortID string
 
 	// UpdateNetworkAppliancePort.

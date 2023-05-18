@@ -80,7 +80,10 @@ type GetOrganizationNetworksParams struct {
 	*/
 	IsBoundToConfigTemplate *bool
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* PerPage.

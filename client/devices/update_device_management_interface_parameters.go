@@ -61,7 +61,10 @@ UpdateDeviceManagementInterfaceParams contains all the parameters to send to the
 */
 type UpdateDeviceManagementInterfaceParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceManagementInterface.

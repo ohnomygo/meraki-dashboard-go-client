@@ -61,7 +61,10 @@ GetDeviceAppliancePerformanceParams contains all the parameters to send to the A
 */
 type GetDeviceAppliancePerformanceParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

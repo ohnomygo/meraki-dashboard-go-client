@@ -64,7 +64,10 @@ type CreateNetworkWirelessRfProfileParams struct {
 	// CreateNetworkWirelessRfProfile.
 	CreateNetworkWirelessRfProfile CreateNetworkWirelessRfProfileBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

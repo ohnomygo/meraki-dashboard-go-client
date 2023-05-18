@@ -64,7 +64,10 @@ type CreateNetworkSensorAlertsProfileParams struct {
 	// CreateNetworkSensorAlertsProfile.
 	CreateNetworkSensorAlertsProfile CreateNetworkSensorAlertsProfileBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

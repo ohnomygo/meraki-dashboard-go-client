@@ -64,7 +64,10 @@ type GenerateDeviceCameraSnapshotParams struct {
 	// GenerateDeviceCameraSnapshot.
 	GenerateDeviceCameraSnapshot GenerateDeviceCameraSnapshotBody
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

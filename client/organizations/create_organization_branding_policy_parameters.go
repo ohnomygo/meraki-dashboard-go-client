@@ -64,7 +64,10 @@ type CreateOrganizationBrandingPolicyParams struct {
 	// CreateOrganizationBrandingPolicy.
 	CreateOrganizationBrandingPolicy CreateOrganizationBrandingPolicyBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

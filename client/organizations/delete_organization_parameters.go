@@ -61,7 +61,10 @@ DeleteOrganizationParams contains all the parameters to send to the API endpoint
 */
 type DeleteOrganizationParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

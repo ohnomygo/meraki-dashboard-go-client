@@ -61,10 +61,16 @@ UpdateOrganizationSamlIdpParams contains all the parameters to send to the API e
 */
 type UpdateOrganizationSamlIdpParams struct {
 
-	// IdpID.
+	/* IdpID.
+
+	   Idp ID
+	*/
 	IdpID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationSamlIdp.

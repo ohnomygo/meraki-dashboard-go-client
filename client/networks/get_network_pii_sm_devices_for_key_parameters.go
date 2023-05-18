@@ -85,7 +85,10 @@ type GetNetworkPiiSmDevicesForKeyParams struct {
 	*/
 	Mac *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* Serial.

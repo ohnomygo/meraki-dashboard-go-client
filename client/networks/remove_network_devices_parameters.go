@@ -61,7 +61,10 @@ RemoveNetworkDevicesParams contains all the parameters to send to the API endpoi
 */
 type RemoveNetworkDevicesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// RemoveNetworkDevices.

@@ -61,7 +61,10 @@ GetNetworkCameraQualityRetentionProfilesParams contains all the parameters to se
 */
 type GetNetworkCameraQualityRetentionProfilesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

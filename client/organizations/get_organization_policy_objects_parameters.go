@@ -68,7 +68,10 @@ type GetOrganizationPolicyObjectsParams struct {
 	*/
 	EndingBefore *string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* PerPage.

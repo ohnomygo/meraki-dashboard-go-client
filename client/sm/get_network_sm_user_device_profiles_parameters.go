@@ -61,10 +61,16 @@ GetNetworkSmUserDeviceProfilesParams contains all the parameters to send to the 
 */
 type GetNetworkSmUserDeviceProfilesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// UserID.
+	/* UserID.
+
+	   User ID
+	*/
 	UserID string
 
 	timeout    time.Duration

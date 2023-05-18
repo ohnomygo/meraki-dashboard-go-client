@@ -61,7 +61,10 @@ SwapNetworkApplianceWarmSpareParams contains all the parameters to send to the A
 */
 type SwapNetworkApplianceWarmSpareParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ RenewOrganizationLicensesSeatsParams contains all the parameters to send to the 
 */
 type RenewOrganizationLicensesSeatsParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// RenewOrganizationLicensesSeats.

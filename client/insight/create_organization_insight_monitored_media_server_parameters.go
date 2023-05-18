@@ -64,7 +64,10 @@ type CreateOrganizationInsightMonitoredMediaServerParams struct {
 	// CreateOrganizationInsightMonitoredMediaServer.
 	CreateOrganizationInsightMonitoredMediaServer CreateOrganizationInsightMonitoredMediaServerBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

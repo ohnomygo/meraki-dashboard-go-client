@@ -64,7 +64,10 @@ type BlinkDeviceLedsParams struct {
 	// BlinkDeviceLeds.
 	BlinkDeviceLeds BlinkDeviceLedsBody
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

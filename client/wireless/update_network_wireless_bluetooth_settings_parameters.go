@@ -61,7 +61,10 @@ UpdateNetworkWirelessBluetoothSettingsParams contains all the parameters to send
 */
 type UpdateNetworkWirelessBluetoothSettingsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkWirelessBluetoothSettings.

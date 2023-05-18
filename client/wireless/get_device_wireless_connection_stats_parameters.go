@@ -74,7 +74,10 @@ type GetDeviceWirelessConnectionStatsParams struct {
 	*/
 	Band *string
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	/* Ssid.

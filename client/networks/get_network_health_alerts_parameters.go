@@ -61,7 +61,10 @@ GetNetworkHealthAlertsParams contains all the parameters to send to the API endp
 */
 type GetNetworkHealthAlertsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

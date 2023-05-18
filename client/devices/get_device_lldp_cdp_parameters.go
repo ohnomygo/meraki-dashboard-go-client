@@ -61,7 +61,10 @@ GetDeviceLldpCdpParams contains all the parameters to send to the API endpoint
 */
 type GetDeviceLldpCdpParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

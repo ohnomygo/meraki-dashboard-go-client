@@ -61,10 +61,16 @@ UpdateOrganizationLicenseParams contains all the parameters to send to the API e
 */
 type UpdateOrganizationLicenseParams struct {
 
-	// LicenseID.
+	/* LicenseID.
+
+	   License ID
+	*/
 	LicenseID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationLicense.

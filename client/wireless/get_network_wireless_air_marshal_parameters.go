@@ -62,7 +62,10 @@ GetNetworkWirelessAirMarshalParams contains all the parameters to send to the AP
 */
 type GetNetworkWirelessAirMarshalParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* T0.

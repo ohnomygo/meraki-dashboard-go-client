@@ -61,7 +61,10 @@ UpdateNetworkSyslogServersParams contains all the parameters to send to the API 
 */
 type UpdateNetworkSyslogServersParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkSyslogServers.

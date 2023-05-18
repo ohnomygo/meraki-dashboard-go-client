@@ -61,10 +61,16 @@ GetNetworkWirelessSsidParams contains all the parameters to send to the API endp
 */
 type GetNetworkWirelessSsidParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	timeout    time.Duration

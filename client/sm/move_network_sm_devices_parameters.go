@@ -64,7 +64,10 @@ type MoveNetworkSmDevicesParams struct {
 	// MoveNetworkSmDevices.
 	MoveNetworkSmDevices MoveNetworkSmDevicesBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

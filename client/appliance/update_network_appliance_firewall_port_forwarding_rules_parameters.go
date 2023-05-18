@@ -61,7 +61,10 @@ UpdateNetworkApplianceFirewallPortForwardingRulesParams contains all the paramet
 */
 type UpdateNetworkApplianceFirewallPortForwardingRulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceFirewallPortForwardingRules.

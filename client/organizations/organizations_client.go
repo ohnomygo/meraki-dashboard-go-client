@@ -64,6 +64,8 @@ type ClientService interface {
 
 	CreateOrganizationInventoryOnboardingCloudMonitoringImport(params *CreateOrganizationInventoryOnboardingCloudMonitoringImportParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateOrganizationInventoryOnboardingCloudMonitoringImportCreated, error)
 
+	CreateOrganizationInventoryOnboardingCloudMonitoringPrepare(params *CreateOrganizationInventoryOnboardingCloudMonitoringPrepareParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateOrganizationInventoryOnboardingCloudMonitoringPrepareCreated, error)
+
 	CreateOrganizationNetwork(params *CreateOrganizationNetworkParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateOrganizationNetworkCreated, error)
 
 	CreateOrganizationPolicyObject(params *CreateOrganizationPolicyObjectParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateOrganizationPolicyObjectCreated, error)
@@ -160,6 +162,8 @@ type ClientService interface {
 
 	GetOrganizationDevicesPowerModulesStatusesByDevice(params *GetOrganizationDevicesPowerModulesStatusesByDeviceParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrganizationDevicesPowerModulesStatusesByDeviceOK, error)
 
+	GetOrganizationDevicesProvisioningStatuses(params *GetOrganizationDevicesProvisioningStatusesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrganizationDevicesProvisioningStatusesOK, error)
+
 	GetOrganizationDevicesStatuses(params *GetOrganizationDevicesStatusesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrganizationDevicesStatusesOK, error)
 
 	GetOrganizationDevicesStatusesOverview(params *GetOrganizationDevicesStatusesOverviewParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrganizationDevicesStatusesOverviewOK, error)
@@ -191,8 +195,6 @@ type ClientService interface {
 	GetOrganizationLicenses(params *GetOrganizationLicensesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrganizationLicensesOK, error)
 
 	GetOrganizationLicensesOverview(params *GetOrganizationLicensesOverviewParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrganizationLicensesOverviewOK, error)
-
-	GetOrganizationLicensingCotermLicenses(params *GetOrganizationLicensingCotermLicensesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrganizationLicensingCotermLicensesOK, error)
 
 	GetOrganizationLoginSecurity(params *GetOrganizationLoginSecurityParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrganizationLoginSecurityOK, error)
 
@@ -245,8 +247,6 @@ type ClientService interface {
 	MoveOrganizationLicenses(params *MoveOrganizationLicensesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*MoveOrganizationLicensesOK, error)
 
 	MoveOrganizationLicensesSeats(params *MoveOrganizationLicensesSeatsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*MoveOrganizationLicensesSeatsOK, error)
-
-	MoveOrganizationLicensingCotermLicenses(params *MoveOrganizationLicensingCotermLicensesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*MoveOrganizationLicensingCotermLicensesOK, error)
 
 	ReleaseFromOrganizationInventory(params *ReleaseFromOrganizationInventoryParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ReleaseFromOrganizationInventoryOK, error)
 
@@ -989,6 +989,47 @@ func (a *Client) CreateOrganizationInventoryOnboardingCloudMonitoringImport(para
 	// unexpected success response
 	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
 	msg := fmt.Sprintf("unexpected success response for createOrganizationInventoryOnboardingCloudMonitoringImport: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
+CreateOrganizationInventoryOnboardingCloudMonitoringPrepare initiates or updates an import session
+
+Initiates or updates an import session. An import ID will be generated and used when you are ready to commit the import.
+*/
+func (a *Client) CreateOrganizationInventoryOnboardingCloudMonitoringPrepare(params *CreateOrganizationInventoryOnboardingCloudMonitoringPrepareParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateOrganizationInventoryOnboardingCloudMonitoringPrepareCreated, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewCreateOrganizationInventoryOnboardingCloudMonitoringPrepareParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "createOrganizationInventoryOnboardingCloudMonitoringPrepare",
+		Method:             "POST",
+		PathPattern:        "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/prepare",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &CreateOrganizationInventoryOnboardingCloudMonitoringPrepareReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*CreateOrganizationInventoryOnboardingCloudMonitoringPrepareCreated)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for createOrganizationInventoryOnboardingCloudMonitoringPrepare: API contract not enforced by server. Client expected to get an error, but got: %T", result)
 	panic(msg)
 }
 
@@ -2961,6 +3002,47 @@ func (a *Client) GetOrganizationDevicesPowerModulesStatusesByDevice(params *GetO
 }
 
 /*
+GetOrganizationDevicesProvisioningStatuses lists the provisioning statuses information for devices in an organization
+
+List the provisioning statuses information for devices in an organization.
+*/
+func (a *Client) GetOrganizationDevicesProvisioningStatuses(params *GetOrganizationDevicesProvisioningStatusesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrganizationDevicesProvisioningStatusesOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewGetOrganizationDevicesProvisioningStatusesParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "getOrganizationDevicesProvisioningStatuses",
+		Method:             "GET",
+		PathPattern:        "/organizations/{organizationId}/devices/provisioning/statuses",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &GetOrganizationDevicesProvisioningStatusesReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*GetOrganizationDevicesProvisioningStatusesOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for getOrganizationDevicesProvisioningStatuses: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
 GetOrganizationDevicesStatuses lists the status of every meraki device in the organization
 
 List the status of every Meraki device in the organization
@@ -3613,47 +3695,6 @@ func (a *Client) GetOrganizationLicensesOverview(params *GetOrganizationLicenses
 	// unexpected success response
 	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
 	msg := fmt.Sprintf("unexpected success response for getOrganizationLicensesOverview: API contract not enforced by server. Client expected to get an error, but got: %T", result)
-	panic(msg)
-}
-
-/*
-GetOrganizationLicensingCotermLicenses lists the licenses in a coterm organization
-
-List the licenses in a coterm organization
-*/
-func (a *Client) GetOrganizationLicensingCotermLicenses(params *GetOrganizationLicensingCotermLicensesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrganizationLicensingCotermLicensesOK, error) {
-	// TODO: Validate the params before sending
-	if params == nil {
-		params = NewGetOrganizationLicensingCotermLicensesParams()
-	}
-	op := &runtime.ClientOperation{
-		ID:                 "getOrganizationLicensingCotermLicenses",
-		Method:             "GET",
-		PathPattern:        "/organizations/{organizationId}/licensing/coterm/licenses",
-		ProducesMediaTypes: []string{"application/json"},
-		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
-		Params:             params,
-		Reader:             &GetOrganizationLicensingCotermLicensesReader{formats: a.formats},
-		AuthInfo:           authInfo,
-		Context:            params.Context,
-		Client:             params.HTTPClient,
-	}
-	for _, opt := range opts {
-		opt(op)
-	}
-
-	result, err := a.transport.Submit(op)
-	if err != nil {
-		return nil, err
-	}
-	success, ok := result.(*GetOrganizationLicensingCotermLicensesOK)
-	if ok {
-		return success, nil
-	}
-	// unexpected success response
-	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
-	msg := fmt.Sprintf("unexpected success response for getOrganizationLicensingCotermLicenses: API contract not enforced by server. Client expected to get an error, but got: %T", result)
 	panic(msg)
 }
 
@@ -4720,47 +4761,6 @@ func (a *Client) MoveOrganizationLicensesSeats(params *MoveOrganizationLicensesS
 	// unexpected success response
 	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
 	msg := fmt.Sprintf("unexpected success response for moveOrganizationLicensesSeats: API contract not enforced by server. Client expected to get an error, but got: %T", result)
-	panic(msg)
-}
-
-/*
-MoveOrganizationLicensingCotermLicenses moves a license to a different organization coterm only
-
-Moves a license to a different organization (coterm only)
-*/
-func (a *Client) MoveOrganizationLicensingCotermLicenses(params *MoveOrganizationLicensingCotermLicensesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*MoveOrganizationLicensingCotermLicensesOK, error) {
-	// TODO: Validate the params before sending
-	if params == nil {
-		params = NewMoveOrganizationLicensingCotermLicensesParams()
-	}
-	op := &runtime.ClientOperation{
-		ID:                 "moveOrganizationLicensingCotermLicenses",
-		Method:             "POST",
-		PathPattern:        "/organizations/{organizationId}/licensing/coterm/licenses/move",
-		ProducesMediaTypes: []string{"application/json"},
-		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"https"},
-		Params:             params,
-		Reader:             &MoveOrganizationLicensingCotermLicensesReader{formats: a.formats},
-		AuthInfo:           authInfo,
-		Context:            params.Context,
-		Client:             params.HTTPClient,
-	}
-	for _, opt := range opts {
-		opt(op)
-	}
-
-	result, err := a.transport.Submit(op)
-	if err != nil {
-		return nil, err
-	}
-	success, ok := result.(*MoveOrganizationLicensingCotermLicensesOK)
-	if ok {
-		return success, nil
-	}
-	// unexpected success response
-	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
-	msg := fmt.Sprintf("unexpected success response for moveOrganizationLicensingCotermLicenses: API contract not enforced by server. Client expected to get an error, but got: %T", result)
 	panic(msg)
 }
 

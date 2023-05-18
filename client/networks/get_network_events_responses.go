@@ -233,6 +233,9 @@ swagger:model GetNetworkEventsOKBodyEventsItems0
 */
 type GetNetworkEventsOKBodyEventsItems0 struct {
 
+	// The category that the event type belongs to
+	Category string `json:"category,omitempty"`
+
 	// A description of the client. This is usually the client's device name.
 	ClientDescription string `json:"clientDescription,omitempty"`
 

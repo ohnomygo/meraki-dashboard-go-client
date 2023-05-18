@@ -61,7 +61,10 @@ GetNetworkPiiRequestsParams contains all the parameters to send to the API endpo
 */
 type GetNetworkPiiRequestsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

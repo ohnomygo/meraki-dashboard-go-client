@@ -61,7 +61,10 @@ GetNetworkAppliancePrefixesDelegatedStaticsParams contains all the parameters to
 */
 type GetNetworkAppliancePrefixesDelegatedStaticsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -116,7 +116,10 @@ type GetNetworkEventsParams struct {
 	*/
 	IncludedEventTypes []string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* PerPage.

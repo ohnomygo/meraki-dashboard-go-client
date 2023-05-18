@@ -80,7 +80,10 @@ type GetNetworkWirelessClientsLatencyStatsParams struct {
 	*/
 	Fields *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* Ssid.

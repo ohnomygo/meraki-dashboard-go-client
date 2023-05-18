@@ -62,10 +62,16 @@ GetNetworkInsightApplicationHealthByTimeParams contains all the parameters to se
 */
 type GetNetworkInsightApplicationHealthByTimeParams struct {
 
-	// ApplicationID.
+	/* ApplicationID.
+
+	   Application ID
+	*/
 	ApplicationID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* Resolution.

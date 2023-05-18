@@ -61,7 +61,10 @@ GetOrganizationWebhooksAlertTypesParams contains all the parameters to send to t
 */
 type GetOrganizationWebhooksAlertTypesParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* ProductType.

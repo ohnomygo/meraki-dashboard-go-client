@@ -62,7 +62,10 @@ GetOrganizationSummaryTopClientsByUsageParams contains all the parameters to sen
 */
 type GetOrganizationSummaryTopClientsByUsageParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* T0.

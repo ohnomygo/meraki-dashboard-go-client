@@ -61,7 +61,10 @@ UpdateNetworkApplianceWarmSpareParams contains all the parameters to send to the
 */
 type UpdateNetworkApplianceWarmSpareParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceWarmSpare.

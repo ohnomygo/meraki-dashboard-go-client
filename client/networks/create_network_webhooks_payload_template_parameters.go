@@ -64,7 +64,10 @@ type CreateNetworkWebhooksPayloadTemplateParams struct {
 	// CreateNetworkWebhooksPayloadTemplate.
 	CreateNetworkWebhooksPayloadTemplate CreateNetworkWebhooksPayloadTemplateBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -61,10 +61,16 @@ UpdateOrganizationInsightMonitoredMediaServerParams contains all the parameters 
 */
 type UpdateOrganizationInsightMonitoredMediaServerParams struct {
 
-	// MonitoredMediaServerID.
+	/* MonitoredMediaServerID.
+
+	   Monitored media server ID
+	*/
 	MonitoredMediaServerID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationInsightMonitoredMediaServer.

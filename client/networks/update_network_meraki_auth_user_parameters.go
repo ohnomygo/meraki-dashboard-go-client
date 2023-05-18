@@ -61,10 +61,16 @@ UpdateNetworkMerakiAuthUserParams contains all the parameters to send to the API
 */
 type UpdateNetworkMerakiAuthUserParams struct {
 
-	// MerakiAuthUserID.
+	/* MerakiAuthUserID.
+
+	   Meraki auth user ID
+	*/
 	MerakiAuthUserID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkMerakiAuthUser.

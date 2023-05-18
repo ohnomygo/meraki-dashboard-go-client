@@ -61,10 +61,16 @@ DeleteNetworkSmUserAccessDeviceParams contains all the parameters to send to the
 */
 type DeleteNetworkSmUserAccessDeviceParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// UserAccessDeviceID.
+	/* UserAccessDeviceID.
+
+	   User access device ID
+	*/
 	UserAccessDeviceID string
 
 	timeout    time.Duration

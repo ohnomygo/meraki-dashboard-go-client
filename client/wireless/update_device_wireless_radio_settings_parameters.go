@@ -61,7 +61,10 @@ UpdateDeviceWirelessRadioSettingsParams contains all the parameters to send to t
 */
 type UpdateDeviceWirelessRadioSettingsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceWirelessRadioSettings.

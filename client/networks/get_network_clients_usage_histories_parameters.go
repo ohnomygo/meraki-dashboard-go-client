@@ -74,7 +74,10 @@ type GetNetworkClientsUsageHistoriesParams struct {
 	*/
 	EndingBefore *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* PerPage.

@@ -86,7 +86,10 @@ type GetOrganizationAPIRequestsParams struct {
 	*/
 	OperationIds []string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* Path.

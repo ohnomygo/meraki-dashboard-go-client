@@ -61,7 +61,10 @@ GetNetworkTrafficShapingDscpTaggingOptionsParams contains all the parameters to 
 */
 type GetNetworkTrafficShapingDscpTaggingOptionsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -61,10 +61,16 @@ GetNetworkFirmwareUpgradesStagedGroupParams contains all the parameters to send 
 */
 type GetNetworkFirmwareUpgradesStagedGroupParams struct {
 
-	// GroupID.
+	/* GroupID.
+
+	   Group ID
+	*/
 	GroupID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

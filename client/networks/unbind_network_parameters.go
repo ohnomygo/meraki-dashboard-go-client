@@ -61,7 +61,10 @@ UnbindNetworkParams contains all the parameters to send to the API endpoint
 */
 type UnbindNetworkParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UnbindNetwork.

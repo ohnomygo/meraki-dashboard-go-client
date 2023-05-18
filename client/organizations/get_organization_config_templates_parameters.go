@@ -61,7 +61,10 @@ GetOrganizationConfigTemplatesParams contains all the parameters to send to the 
 */
 type GetOrganizationConfigTemplatesParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

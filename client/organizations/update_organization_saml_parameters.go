@@ -61,7 +61,10 @@ UpdateOrganizationSamlParams contains all the parameters to send to the API endp
 */
 type UpdateOrganizationSamlParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationSaml.

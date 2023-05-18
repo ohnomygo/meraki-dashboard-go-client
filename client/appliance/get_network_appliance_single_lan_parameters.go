@@ -61,7 +61,10 @@ GetNetworkApplianceSingleLanParams contains all the parameters to send to the AP
 */
 type GetNetworkApplianceSingleLanParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -62,7 +62,10 @@ GetNetworkSmDeviceDeviceCommandLogsParams contains all the parameters to send to
 */
 type GetNetworkSmDeviceDeviceCommandLogsParams struct {
 
-	// DeviceID.
+	/* DeviceID.
+
+	   Device ID
+	*/
 	DeviceID string
 
 	/* EndingBefore.
@@ -71,7 +74,10 @@ type GetNetworkSmDeviceDeviceCommandLogsParams struct {
 	*/
 	EndingBefore *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* PerPage.

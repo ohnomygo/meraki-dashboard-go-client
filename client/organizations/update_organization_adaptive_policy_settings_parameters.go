@@ -61,7 +61,10 @@ UpdateOrganizationAdaptivePolicySettingsParams contains all the parameters to se
 */
 type UpdateOrganizationAdaptivePolicySettingsParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationAdaptivePolicySettings.

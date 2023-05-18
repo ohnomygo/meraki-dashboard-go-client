@@ -61,7 +61,10 @@ GetNetworkApplianceFirewallL7FirewallRulesParams contains all the parameters to 
 */
 type GetNetworkApplianceFirewallL7FirewallRulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

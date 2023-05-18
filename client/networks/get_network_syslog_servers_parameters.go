@@ -61,7 +61,10 @@ GetNetworkSyslogServersParams contains all the parameters to send to the API end
 */
 type GetNetworkSyslogServersParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

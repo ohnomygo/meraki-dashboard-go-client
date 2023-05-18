@@ -61,7 +61,10 @@ VmxNetworkDevicesClaimParams contains all the parameters to send to the API endp
 */
 type VmxNetworkDevicesClaimParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// VmxNetworkDevicesClaim.

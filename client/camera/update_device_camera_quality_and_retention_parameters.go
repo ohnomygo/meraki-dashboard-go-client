@@ -61,7 +61,10 @@ UpdateDeviceCameraQualityAndRetentionParams contains all the parameters to send 
 */
 type UpdateDeviceCameraQualityAndRetentionParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceCameraQualityAndRetention.

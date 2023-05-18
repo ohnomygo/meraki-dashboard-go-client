@@ -61,7 +61,10 @@ GetOrganizationInsightApplicationsParams contains all the parameters to send to 
 */
 type GetOrganizationInsightApplicationsParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

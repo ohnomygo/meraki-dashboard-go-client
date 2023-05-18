@@ -61,7 +61,10 @@ UpdateNetworkApplianceFirewallSettingsParams contains all the parameters to send
 */
 type UpdateNetworkApplianceFirewallSettingsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceFirewallSettings.

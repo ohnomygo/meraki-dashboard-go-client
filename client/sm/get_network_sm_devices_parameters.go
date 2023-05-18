@@ -86,7 +86,10 @@ type GetNetworkSmDevicesParams struct {
 	*/
 	Ids []string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* PerPage.

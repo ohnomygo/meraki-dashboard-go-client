@@ -61,7 +61,10 @@ UpdateNetworkCellularGatewaySubnetPoolParams contains all the parameters to send
 */
 type UpdateNetworkCellularGatewaySubnetPoolParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkCellularGatewaySubnetPool.

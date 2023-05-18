@@ -68,7 +68,10 @@ type GetDeviceCameraAnalyticsOverviewParams struct {
 	*/
 	ObjectType *string
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	/* T0.

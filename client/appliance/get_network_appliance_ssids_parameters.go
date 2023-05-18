@@ -61,7 +61,10 @@ GetNetworkApplianceSsidsParams contains all the parameters to send to the API en
 */
 type GetNetworkApplianceSsidsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

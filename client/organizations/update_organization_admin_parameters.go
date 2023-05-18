@@ -61,10 +61,16 @@ UpdateOrganizationAdminParams contains all the parameters to send to the API end
 */
 type UpdateOrganizationAdminParams struct {
 
-	// AdminID.
+	/* AdminID.
+
+	   Admin ID
+	*/
 	AdminID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationAdmin.

@@ -62,7 +62,10 @@ GetNetworkSmDeviceConnectivityParams contains all the parameters to send to the 
 */
 type GetNetworkSmDeviceConnectivityParams struct {
 
-	// DeviceID.
+	/* DeviceID.
+
+	   Device ID
+	*/
 	DeviceID string
 
 	/* EndingBefore.
@@ -71,7 +74,10 @@ type GetNetworkSmDeviceConnectivityParams struct {
 	*/
 	EndingBefore *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* PerPage.

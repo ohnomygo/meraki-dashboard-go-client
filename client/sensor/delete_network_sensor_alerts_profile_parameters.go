@@ -61,10 +61,16 @@ DeleteNetworkSensorAlertsProfileParams contains all the parameters to send to th
 */
 type DeleteNetworkSensorAlertsProfileParams struct {
 
-	// ID.
+	/* ID.
+
+	   Id
+	*/
 	ID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

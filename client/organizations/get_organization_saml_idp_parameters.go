@@ -61,10 +61,16 @@ GetOrganizationSamlIdpParams contains all the parameters to send to the API endp
 */
 type GetOrganizationSamlIdpParams struct {
 
-	// IdpID.
+	/* IdpID.
+
+	   Idp ID
+	*/
 	IdpID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

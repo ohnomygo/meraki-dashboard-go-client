@@ -61,7 +61,10 @@ GetDeviceWirelessStatusParams contains all the parameters to send to the API end
 */
 type GetDeviceWirelessStatusParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

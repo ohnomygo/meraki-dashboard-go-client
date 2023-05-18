@@ -64,7 +64,10 @@ type CreateNetworkFirmwareUpgradesRollbackParams struct {
 	// CreateNetworkFirmwareUpgradesRollback.
 	CreateNetworkFirmwareUpgradesRollback CreateNetworkFirmwareUpgradesRollbackBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

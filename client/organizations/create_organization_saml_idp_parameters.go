@@ -64,7 +64,10 @@ type CreateOrganizationSamlIdpParams struct {
 	// CreateOrganizationSamlIdp.
 	CreateOrganizationSamlIdp CreateOrganizationSamlIdpBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

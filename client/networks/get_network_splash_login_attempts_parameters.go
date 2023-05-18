@@ -68,7 +68,10 @@ type GetNetworkSplashLoginAttemptsParams struct {
 	*/
 	LoginIdentifier *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* SsidNumber.

@@ -61,10 +61,16 @@ GetNetworkClientUsageHistoryParams contains all the parameters to send to the AP
 */
 type GetNetworkClientUsageHistoryParams struct {
 
-	// ClientID.
+	/* ClientID.
+
+	   Client ID
+	*/
 	ClientID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

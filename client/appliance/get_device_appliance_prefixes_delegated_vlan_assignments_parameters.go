@@ -61,7 +61,10 @@ GetDeviceAppliancePrefixesDelegatedVlanAssignmentsParams contains all the parame
 */
 type GetDeviceAppliancePrefixesDelegatedVlanAssignmentsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

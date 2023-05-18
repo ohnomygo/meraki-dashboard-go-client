@@ -61,7 +61,10 @@ UpdateDeviceCameraSenseParams contains all the parameters to send to the API end
 */
 type UpdateDeviceCameraSenseParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceCameraSense.

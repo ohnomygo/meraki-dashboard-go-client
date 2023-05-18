@@ -61,7 +61,10 @@ GetDeviceWirelessRadioSettingsParams contains all the parameters to send to the 
 */
 type GetDeviceWirelessRadioSettingsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

@@ -68,7 +68,10 @@ type GetOrganizationDevicesUplinksLossAndLatencyParams struct {
 	*/
 	IP *string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* T0.

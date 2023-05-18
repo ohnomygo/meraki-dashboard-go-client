@@ -61,7 +61,10 @@ GetNetworkSensorAlertsCurrentOverviewByMetricParams contains all the parameters 
 */
 type GetNetworkSensorAlertsCurrentOverviewByMetricParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

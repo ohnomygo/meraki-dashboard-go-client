@@ -61,10 +61,16 @@ UpdateNetworkWirelessSsidEapOverrideParams contains all the parameters to send t
 */
 type UpdateNetworkWirelessSsidEapOverrideParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	// UpdateNetworkWirelessSsidEapOverride.

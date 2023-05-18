@@ -61,10 +61,16 @@ DeleteNetworkPiiRequestParams contains all the parameters to send to the API end
 */
 type DeleteNetworkPiiRequestParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// RequestID.
+	/* RequestID.
+
+	   Request ID
+	*/
 	RequestID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ UpdateNetworkApplianceTrafficShapingRulesParams contains all the parameters to s
 */
 type UpdateNetworkApplianceTrafficShapingRulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceTrafficShapingRules.

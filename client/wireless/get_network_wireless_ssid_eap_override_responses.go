@@ -288,7 +288,7 @@ func (o *GetNetworkWirelessSsidEapOverrideOKBodyEapolKey) UnmarshalBinary(b []by
 }
 
 /*
-GetNetworkWirelessSsidEapOverrideOKBodyIdentity EAPOL Key settings.
+GetNetworkWirelessSsidEapOverrideOKBodyIdentity EAP settings for identity requests.
 swagger:model GetNetworkWirelessSsidEapOverrideOKBodyIdentity
 */
 type GetNetworkWirelessSsidEapOverrideOKBodyIdentity struct {

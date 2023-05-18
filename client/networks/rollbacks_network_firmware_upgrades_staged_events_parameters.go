@@ -61,7 +61,10 @@ RollbacksNetworkFirmwareUpgradesStagedEventsParams contains all the parameters t
 */
 type RollbacksNetworkFirmwareUpgradesStagedEventsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// RollbacksNetworkFirmwareUpgradesStagedEvents.

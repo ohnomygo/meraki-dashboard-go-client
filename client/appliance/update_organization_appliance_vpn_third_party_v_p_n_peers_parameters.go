@@ -61,7 +61,10 @@ UpdateOrganizationApplianceVpnThirdPartyVPNPeersParams contains all the paramete
 */
 type UpdateOrganizationApplianceVpnThirdPartyVPNPeersParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationApplianceVpnThirdPartyVPNPeers.

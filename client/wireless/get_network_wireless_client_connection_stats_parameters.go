@@ -74,10 +74,16 @@ type GetNetworkWirelessClientConnectionStatsParams struct {
 	*/
 	Band *string
 
-	// ClientID.
+	/* ClientID.
+
+	   Client ID
+	*/
 	ClientID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* Ssid.

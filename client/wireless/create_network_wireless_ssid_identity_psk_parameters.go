@@ -64,10 +64,16 @@ type CreateNetworkWirelessSsidIdentityPskParams struct {
 	// CreateNetworkWirelessSsidIdentityPsk.
 	CreateNetworkWirelessSsidIdentityPsk CreateNetworkWirelessSsidIdentityPskBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	timeout    time.Duration

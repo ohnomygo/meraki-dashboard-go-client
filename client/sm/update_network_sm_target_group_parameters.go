@@ -61,10 +61,16 @@ UpdateNetworkSmTargetGroupParams contains all the parameters to send to the API 
 */
 type UpdateNetworkSmTargetGroupParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// TargetGroupID.
+	/* TargetGroupID.
+
+	   Target group ID
+	*/
 	TargetGroupID string
 
 	// UpdateNetworkSmTargetGroup.

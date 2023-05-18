@@ -61,10 +61,16 @@ GetNetworkSmDeviceDeviceProfilesParams contains all the parameters to send to th
 */
 type GetNetworkSmDeviceDeviceProfilesParams struct {
 
-	// DeviceID.
+	/* DeviceID.
+
+	   Device ID
+	*/
 	DeviceID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ GetNetworkApplianceWarmSpareParams contains all the parameters to send to the AP
 */
 type GetNetworkApplianceWarmSpareParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

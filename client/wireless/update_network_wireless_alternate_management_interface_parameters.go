@@ -61,7 +61,10 @@ UpdateNetworkWirelessAlternateManagementInterfaceParams contains all the paramet
 */
 type UpdateNetworkWirelessAlternateManagementInterfaceParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkWirelessAlternateManagementInterface.

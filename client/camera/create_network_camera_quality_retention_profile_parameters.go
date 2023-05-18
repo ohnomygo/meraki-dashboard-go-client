@@ -64,7 +64,10 @@ type CreateNetworkCameraQualityRetentionProfileParams struct {
 	// CreateNetworkCameraQualityRetentionProfile.
 	CreateNetworkCameraQualityRetentionProfile CreateNetworkCameraQualityRetentionProfileBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

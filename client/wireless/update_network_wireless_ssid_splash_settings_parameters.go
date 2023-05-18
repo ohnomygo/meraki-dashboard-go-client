@@ -61,10 +61,16 @@ UpdateNetworkWirelessSsidSplashSettingsParams contains all the parameters to sen
 */
 type UpdateNetworkWirelessSsidSplashSettingsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	// UpdateNetworkWirelessSsidSplashSettings.

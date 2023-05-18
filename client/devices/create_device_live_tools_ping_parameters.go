@@ -64,7 +64,10 @@ type CreateDeviceLiveToolsPingParams struct {
 	// CreateDeviceLiveToolsPing.
 	CreateDeviceLiveToolsPing CreateDeviceLiveToolsPingBody
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

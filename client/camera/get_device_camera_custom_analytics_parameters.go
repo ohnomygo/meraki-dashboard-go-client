@@ -61,7 +61,10 @@ GetDeviceCameraCustomAnalyticsParams contains all the parameters to send to the 
 */
 type GetDeviceCameraCustomAnalyticsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

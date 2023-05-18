@@ -61,7 +61,10 @@ UpdateNetworkAlertsSettingsParams contains all the parameters to send to the API
 */
 type UpdateNetworkAlertsSettingsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkAlertsSettings.

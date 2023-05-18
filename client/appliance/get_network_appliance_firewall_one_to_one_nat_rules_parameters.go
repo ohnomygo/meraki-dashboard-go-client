@@ -61,7 +61,10 @@ GetNetworkApplianceFirewallOneToOneNatRulesParams contains all the parameters to
 */
 type GetNetworkApplianceFirewallOneToOneNatRulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

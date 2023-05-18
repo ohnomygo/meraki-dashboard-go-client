@@ -61,13 +61,19 @@ UpdateNetworkApplianceVlanParams contains all the parameters to send to the API 
 */
 type UpdateNetworkApplianceVlanParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceVlan.
 	UpdateNetworkApplianceVlan UpdateNetworkApplianceVlanBody
 
-	// VlanID.
+	/* VlanID.
+
+	   Vlan ID
+	*/
 	VlanID string
 
 	timeout    time.Duration

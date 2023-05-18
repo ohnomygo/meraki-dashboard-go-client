@@ -107,7 +107,7 @@ func (o *CreateNetworkWebhooksPayloadTemplateCreated) readResponse(response runt
 
 /*
 CreateNetworkWebhooksPayloadTemplateBody create network webhooks payload template body
-// Example: {"body":"{\"event_type\":\"{{alertTypeId}}\",\"client_payload\":{\"text\":\"{{alertData}}\"}}","bodyFile":"Qm9keSBGaWxl","headers":[{"name":"Authorization","template":"Bearer {{sharedSecret}}"}],"headersFile":"SGVhZGVycyBGaWxl","name":"Weeb Hooks"}
+// Example: {"body":"{\"event_type\":\"{{alertTypeId}}\",\"client_payload\":{\"text\":\"{{alertData}}\"}}","bodyFile":"Qm9keSBGaWxl","headers":[{"name":"Authorization","template":"Bearer {{sharedSecret}}"}],"headersFile":"SGVhZGVycyBGaWxl","name":"Custom Template"}
 swagger:model CreateNetworkWebhooksPayloadTemplateBody
 */
 type CreateNetworkWebhooksPayloadTemplateBody struct {
@@ -254,6 +254,9 @@ type CreateNetworkWebhooksPayloadTemplateCreatedBody struct {
 	// Webhook payload template Id
 	PayloadTemplateID string `json:"payloadTemplateId,omitempty"`
 
+	// sharing
+	Sharing *CreateNetworkWebhooksPayloadTemplateCreatedBodySharing `json:"sharing,omitempty"`
+
 	// The type of the payload template
 	Type string `json:"type,omitempty"`
 }
@@ -263,6 +266,10 @@ func (o *CreateNetworkWebhooksPayloadTemplateCreatedBody) Validate(formats strfm
 	var res []error
 
 	if err := o.validateHeaders(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := o.validateSharing(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -298,11 +305,34 @@ func (o *CreateNetworkWebhooksPayloadTemplateCreatedBody) validateHeaders(format
 	return nil
 }
 
+func (o *CreateNetworkWebhooksPayloadTemplateCreatedBody) validateSharing(formats strfmt.Registry) error {
+	if swag.IsZero(o.Sharing) { // not required
+		return nil
+	}
+
+	if o.Sharing != nil {
+		if err := o.Sharing.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("createNetworkWebhooksPayloadTemplateCreated" + "." + "sharing")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("createNetworkWebhooksPayloadTemplateCreated" + "." + "sharing")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
 // ContextValidate validate this create network webhooks payload template created body based on the context it is used
 func (o *CreateNetworkWebhooksPayloadTemplateCreatedBody) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
 	if err := o.contextValidateHeaders(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := o.contextValidateSharing(ctx, formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -327,6 +357,22 @@ func (o *CreateNetworkWebhooksPayloadTemplateCreatedBody) contextValidateHeaders
 			}
 		}
 
+	}
+
+	return nil
+}
+
+func (o *CreateNetworkWebhooksPayloadTemplateCreatedBody) contextValidateSharing(ctx context.Context, formats strfmt.Registry) error {
+
+	if o.Sharing != nil {
+		if err := o.Sharing.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("createNetworkWebhooksPayloadTemplateCreated" + "." + "sharing")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("createNetworkWebhooksPayloadTemplateCreated" + "." + "sharing")
+			}
+			return err
+		}
 	}
 
 	return nil
@@ -384,6 +430,135 @@ func (o *CreateNetworkWebhooksPayloadTemplateCreatedBodyHeadersItems0) MarshalBi
 // UnmarshalBinary interface implementation
 func (o *CreateNetworkWebhooksPayloadTemplateCreatedBodyHeadersItems0) UnmarshalBinary(b []byte) error {
 	var res CreateNetworkWebhooksPayloadTemplateCreatedBodyHeadersItems0
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
+	return nil
+}
+
+/*
+CreateNetworkWebhooksPayloadTemplateCreatedBodySharing Information on which entities have access to the template
+swagger:model CreateNetworkWebhooksPayloadTemplateCreatedBodySharing
+*/
+type CreateNetworkWebhooksPayloadTemplateCreatedBodySharing struct {
+
+	// by network
+	ByNetwork *CreateNetworkWebhooksPayloadTemplateCreatedBodySharingByNetwork `json:"byNetwork,omitempty"`
+}
+
+// Validate validates this create network webhooks payload template created body sharing
+func (o *CreateNetworkWebhooksPayloadTemplateCreatedBodySharing) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.validateByNetwork(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *CreateNetworkWebhooksPayloadTemplateCreatedBodySharing) validateByNetwork(formats strfmt.Registry) error {
+	if swag.IsZero(o.ByNetwork) { // not required
+		return nil
+	}
+
+	if o.ByNetwork != nil {
+		if err := o.ByNetwork.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("createNetworkWebhooksPayloadTemplateCreated" + "." + "sharing" + "." + "byNetwork")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("createNetworkWebhooksPayloadTemplateCreated" + "." + "sharing" + "." + "byNetwork")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
+// ContextValidate validate this create network webhooks payload template created body sharing based on the context it is used
+func (o *CreateNetworkWebhooksPayloadTemplateCreatedBodySharing) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.contextValidateByNetwork(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *CreateNetworkWebhooksPayloadTemplateCreatedBodySharing) contextValidateByNetwork(ctx context.Context, formats strfmt.Registry) error {
+
+	if o.ByNetwork != nil {
+		if err := o.ByNetwork.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("createNetworkWebhooksPayloadTemplateCreated" + "." + "sharing" + "." + "byNetwork")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("createNetworkWebhooksPayloadTemplateCreated" + "." + "sharing" + "." + "byNetwork")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *CreateNetworkWebhooksPayloadTemplateCreatedBodySharing) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *CreateNetworkWebhooksPayloadTemplateCreatedBodySharing) UnmarshalBinary(b []byte) error {
+	var res CreateNetworkWebhooksPayloadTemplateCreatedBodySharing
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
+	return nil
+}
+
+/*
+CreateNetworkWebhooksPayloadTemplateCreatedBodySharingByNetwork Information on network access to the template
+swagger:model CreateNetworkWebhooksPayloadTemplateCreatedBodySharingByNetwork
+*/
+type CreateNetworkWebhooksPayloadTemplateCreatedBodySharingByNetwork struct {
+
+	// Indicates whether network admins may modify this template
+	AdminsCanModify bool `json:"adminsCanModify,omitempty"`
+}
+
+// Validate validates this create network webhooks payload template created body sharing by network
+func (o *CreateNetworkWebhooksPayloadTemplateCreatedBodySharingByNetwork) Validate(formats strfmt.Registry) error {
+	return nil
+}
+
+// ContextValidate validates this create network webhooks payload template created body sharing by network based on context it is used
+func (o *CreateNetworkWebhooksPayloadTemplateCreatedBodySharingByNetwork) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *CreateNetworkWebhooksPayloadTemplateCreatedBodySharingByNetwork) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *CreateNetworkWebhooksPayloadTemplateCreatedBodySharingByNetwork) UnmarshalBinary(b []byte) error {
+	var res CreateNetworkWebhooksPayloadTemplateCreatedBodySharingByNetwork
 	if err := swag.ReadJSON(b, &res); err != nil {
 		return err
 	}

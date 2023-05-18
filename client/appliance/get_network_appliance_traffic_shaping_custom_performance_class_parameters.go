@@ -61,10 +61,16 @@ GetNetworkApplianceTrafficShapingCustomPerformanceClassParams contains all the p
 */
 type GetNetworkApplianceTrafficShapingCustomPerformanceClassParams struct {
 
-	// CustomPerformanceClassID.
+	/* CustomPerformanceClassID.
+
+	   Custom performance class ID
+	*/
 	CustomPerformanceClassID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

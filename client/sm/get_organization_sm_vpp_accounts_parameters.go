@@ -61,7 +61,10 @@ GetOrganizationSmVppAccountsParams contains all the parameters to send to the AP
 */
 type GetOrganizationSmVppAccountsParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

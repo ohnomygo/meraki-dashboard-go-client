@@ -61,10 +61,16 @@ GetNetworkSmDeviceCellularUsageHistoryParams contains all the parameters to send
 */
 type GetNetworkSmDeviceCellularUsageHistoryParams struct {
 
-	// DeviceID.
+	/* DeviceID.
+
+	   Device ID
+	*/
 	DeviceID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

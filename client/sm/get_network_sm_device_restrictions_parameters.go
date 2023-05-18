@@ -61,10 +61,16 @@ GetNetworkSmDeviceRestrictionsParams contains all the parameters to send to the 
 */
 type GetNetworkSmDeviceRestrictionsParams struct {
 
-	// DeviceID.
+	/* DeviceID.
+
+	   Device ID
+	*/
 	DeviceID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

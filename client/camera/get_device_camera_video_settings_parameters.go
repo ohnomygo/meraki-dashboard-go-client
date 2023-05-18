@@ -61,7 +61,10 @@ GetDeviceCameraVideoSettingsParams contains all the parameters to send to the AP
 */
 type GetDeviceCameraVideoSettingsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

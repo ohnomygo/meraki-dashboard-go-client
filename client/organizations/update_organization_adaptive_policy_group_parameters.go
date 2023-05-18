@@ -61,10 +61,16 @@ UpdateOrganizationAdaptivePolicyGroupParams contains all the parameters to send 
 */
 type UpdateOrganizationAdaptivePolicyGroupParams struct {
 
-	// ID.
+	/* ID.
+
+	   Id
+	*/
 	ID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationAdaptivePolicyGroup.

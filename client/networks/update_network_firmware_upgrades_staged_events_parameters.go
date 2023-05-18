@@ -61,7 +61,10 @@ UpdateNetworkFirmwareUpgradesStagedEventsParams contains all the parameters to s
 */
 type UpdateNetworkFirmwareUpgradesStagedEventsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkFirmwareUpgradesStagedEvents.

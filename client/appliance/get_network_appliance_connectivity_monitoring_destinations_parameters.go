@@ -61,7 +61,10 @@ GetNetworkApplianceConnectivityMonitoringDestinationsParams contains all the par
 */
 type GetNetworkApplianceConnectivityMonitoringDestinationsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

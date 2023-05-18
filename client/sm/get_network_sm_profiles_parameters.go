@@ -61,7 +61,10 @@ GetNetworkSmProfilesParams contains all the parameters to send to the API endpoi
 */
 type GetNetworkSmProfilesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

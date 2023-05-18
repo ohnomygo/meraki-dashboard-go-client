@@ -61,7 +61,10 @@ UpdateNetworkSnmpParams contains all the parameters to send to the API endpoint
 */
 type UpdateNetworkSnmpParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkSnmp.

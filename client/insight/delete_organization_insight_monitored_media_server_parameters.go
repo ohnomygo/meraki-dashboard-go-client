@@ -61,10 +61,16 @@ DeleteOrganizationInsightMonitoredMediaServerParams contains all the parameters 
 */
 type DeleteOrganizationInsightMonitoredMediaServerParams struct {
 
-	// MonitoredMediaServerID.
+	/* MonitoredMediaServerID.
+
+	   Monitored media server ID
+	*/
 	MonitoredMediaServerID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ UpdateNetworkFirmwareUpgradesParams contains all the parameters to send to the A
 */
 type UpdateNetworkFirmwareUpgradesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkFirmwareUpgrades.

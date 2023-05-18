@@ -61,10 +61,16 @@ UpdateNetworkWirelessSsidVpnParams contains all the parameters to send to the AP
 */
 type UpdateNetworkWirelessSsidVpnParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	// UpdateNetworkWirelessSsidVpn.

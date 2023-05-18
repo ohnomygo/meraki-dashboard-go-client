@@ -61,10 +61,16 @@ UpdateNetworkWirelessSsidHotspot20Params contains all the parameters to send to 
 */
 type UpdateNetworkWirelessSsidHotspot20Params struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	// UpdateNetworkWirelessSsidHotspot20.

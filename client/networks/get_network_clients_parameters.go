@@ -98,7 +98,10 @@ type GetNetworkClientsParams struct {
 	*/
 	Mac *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* Os.

@@ -62,7 +62,10 @@ GetNetworkSmDevicePerformanceHistoryParams contains all the parameters to send t
 */
 type GetNetworkSmDevicePerformanceHistoryParams struct {
 
-	// DeviceID.
+	/* DeviceID.
+
+	   Device ID
+	*/
 	DeviceID string
 
 	/* EndingBefore.
@@ -71,7 +74,10 @@ type GetNetworkSmDevicePerformanceHistoryParams struct {
 	*/
 	EndingBefore *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* PerPage.

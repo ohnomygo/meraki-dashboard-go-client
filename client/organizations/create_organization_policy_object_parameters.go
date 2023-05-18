@@ -64,7 +64,10 @@ type CreateOrganizationPolicyObjectParams struct {
 	// CreateOrganizationPolicyObject.
 	CreateOrganizationPolicyObject CreateOrganizationPolicyObjectBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

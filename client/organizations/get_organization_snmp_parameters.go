@@ -61,7 +61,10 @@ GetOrganizationSnmpParams contains all the parameters to send to the API endpoin
 */
 type GetOrganizationSnmpParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

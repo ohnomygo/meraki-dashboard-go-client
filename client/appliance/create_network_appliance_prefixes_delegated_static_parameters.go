@@ -64,7 +64,10 @@ type CreateNetworkAppliancePrefixesDelegatedStaticParams struct {
 	// CreateNetworkAppliancePrefixesDelegatedStatic.
 	CreateNetworkAppliancePrefixesDelegatedStatic CreateNetworkAppliancePrefixesDelegatedStaticBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

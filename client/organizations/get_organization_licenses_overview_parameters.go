@@ -61,7 +61,10 @@ GetOrganizationLicensesOverviewParams contains all the parameters to send to the
 */
 type GetOrganizationLicensesOverviewParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

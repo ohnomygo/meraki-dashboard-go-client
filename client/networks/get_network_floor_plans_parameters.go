@@ -61,7 +61,10 @@ GetNetworkFloorPlansParams contains all the parameters to send to the API endpoi
 */
 type GetNetworkFloorPlansParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

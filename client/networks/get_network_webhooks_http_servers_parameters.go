@@ -61,7 +61,10 @@ GetNetworkWebhooksHTTPServersParams contains all the parameters to send to the A
 */
 type GetNetworkWebhooksHTTPServersParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

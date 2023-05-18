@@ -64,7 +64,10 @@ type CombineOrganizationNetworksParams struct {
 	// CombineOrganizationNetworks.
 	CombineOrganizationNetworks CombineOrganizationNetworksBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

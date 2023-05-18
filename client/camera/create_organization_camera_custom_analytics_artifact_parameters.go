@@ -64,7 +64,10 @@ type CreateOrganizationCameraCustomAnalyticsArtifactParams struct {
 	// CreateOrganizationCameraCustomAnalyticsArtifact.
 	CreateOrganizationCameraCustomAnalyticsArtifact CreateOrganizationCameraCustomAnalyticsArtifactBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

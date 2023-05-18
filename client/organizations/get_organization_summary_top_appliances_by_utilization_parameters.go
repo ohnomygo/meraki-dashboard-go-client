@@ -62,7 +62,10 @@ GetOrganizationSummaryTopAppliancesByUtilizationParams contains all the paramete
 */
 type GetOrganizationSummaryTopAppliancesByUtilizationParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* T0.

@@ -74,7 +74,10 @@ type GetDeviceLossAndLatencyHistoryParams struct {
 	*/
 	Resolution *int64
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	/* T0.

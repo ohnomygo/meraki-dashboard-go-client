@@ -64,7 +64,10 @@ type CreateNetworkApplianceStaticRouteParams struct {
 	// CreateNetworkApplianceStaticRoute.
 	CreateNetworkApplianceStaticRoute CreateNetworkApplianceStaticRouteBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -68,7 +68,10 @@ type GetOrganizationDevicesStatusesOverviewParams struct {
 	*/
 	NetworkIds []string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* ProductTypes.

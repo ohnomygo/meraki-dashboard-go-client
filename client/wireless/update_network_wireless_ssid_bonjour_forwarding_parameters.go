@@ -61,10 +61,16 @@ UpdateNetworkWirelessSsidBonjourForwardingParams contains all the parameters to 
 */
 type UpdateNetworkWirelessSsidBonjourForwardingParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	// UpdateNetworkWirelessSsidBonjourForwarding.

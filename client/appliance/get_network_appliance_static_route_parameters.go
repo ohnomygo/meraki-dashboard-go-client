@@ -61,10 +61,16 @@ GetNetworkApplianceStaticRouteParams contains all the parameters to send to the 
 */
 type GetNetworkApplianceStaticRouteParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// StaticRouteID.
+	/* StaticRouteID.
+
+	   Static route ID
+	*/
 	StaticRouteID string
 
 	timeout    time.Duration

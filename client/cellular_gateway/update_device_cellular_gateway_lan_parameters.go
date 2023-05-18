@@ -61,7 +61,10 @@ UpdateDeviceCellularGatewayLanParams contains all the parameters to send to the 
 */
 type UpdateDeviceCellularGatewayLanParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceCellularGatewayLan.

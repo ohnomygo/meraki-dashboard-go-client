@@ -61,10 +61,16 @@ GetNetworkClientParams contains all the parameters to send to the API endpoint
 */
 type GetNetworkClientParams struct {
 
-	// ClientID.
+	/* ClientID.
+
+	   Client ID
+	*/
 	ClientID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

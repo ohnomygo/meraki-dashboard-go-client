@@ -61,10 +61,16 @@ DeleteNetworkWebhooksPayloadTemplateParams contains all the parameters to send t
 */
 type DeleteNetworkWebhooksPayloadTemplateParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// PayloadTemplateID.
+	/* PayloadTemplateID.
+
+	   Payload template ID
+	*/
 	PayloadTemplateID string
 
 	timeout    time.Duration

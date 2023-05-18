@@ -92,7 +92,10 @@ type GetOrganizationFirmwareUpgradesByDeviceParams struct {
 	*/
 	NetworkIds []string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* PerPage.

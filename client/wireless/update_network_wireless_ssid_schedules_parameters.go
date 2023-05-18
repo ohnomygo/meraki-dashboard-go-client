@@ -61,10 +61,16 @@ UpdateNetworkWirelessSsidSchedulesParams contains all the parameters to send to 
 */
 type UpdateNetworkWirelessSsidSchedulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	// UpdateNetworkWirelessSsidSchedules.

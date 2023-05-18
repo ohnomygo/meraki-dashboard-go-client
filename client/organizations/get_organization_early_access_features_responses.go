@@ -6,11 +6,14 @@ package organizations
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
+	"context"
 	"fmt"
 	"io"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
+	"github.com/go-openapi/swag"
 )
 
 // GetOrganizationEarlyAccessFeaturesReader is a Reader for the GetOrganizationEarlyAccessFeatures structure.
@@ -43,7 +46,7 @@ GetOrganizationEarlyAccessFeaturesOK describes a response with status code 200, 
 Successful operation
 */
 type GetOrganizationEarlyAccessFeaturesOK struct {
-	Payload []interface{}
+	Payload []*GetOrganizationEarlyAccessFeaturesOKBodyItems0
 }
 
 // IsSuccess returns true when this get organization early access features o k response has a 2xx status code
@@ -84,7 +87,7 @@ func (o *GetOrganizationEarlyAccessFeaturesOK) String() string {
 	return fmt.Sprintf("[GET /organizations/{organizationId}/earlyAccess/features][%d] getOrganizationEarlyAccessFeaturesOK  %+v", 200, o.Payload)
 }
 
-func (o *GetOrganizationEarlyAccessFeaturesOK) GetPayload() []interface{} {
+func (o *GetOrganizationEarlyAccessFeaturesOK) GetPayload() []*GetOrganizationEarlyAccessFeaturesOKBodyItems0 {
 	return o.Payload
 }
 
@@ -95,5 +98,155 @@ func (o *GetOrganizationEarlyAccessFeaturesOK) readResponse(response runtime.Cli
 		return err
 	}
 
+	return nil
+}
+
+/*
+GetOrganizationEarlyAccessFeaturesOKBodyItems0 get organization early access features o k body items0
+swagger:model GetOrganizationEarlyAccessFeaturesOKBodyItems0
+*/
+type GetOrganizationEarlyAccessFeaturesOKBodyItems0 struct {
+
+	// descriptions
+	Descriptions *GetOrganizationEarlyAccessFeaturesOKBodyItems0Descriptions `json:"descriptions,omitempty"`
+
+	// Link to the documentation of this early access feature
+	DocumentationLink string `json:"documentationLink,omitempty"`
+
+	// If this early access feature can only be opted in for the entire organization
+	IsOrgScopedOnly bool `json:"isOrgScopedOnly,omitempty"`
+
+	// Name of the early access feature
+	Name string `json:"name,omitempty"`
+
+	// Short name of the early access feature
+	ShortName string `json:"shortName,omitempty"`
+
+	// Link to get support for this early access feature
+	SupportLink string `json:"supportLink,omitempty"`
+
+	// Topic of the early access feature
+	Topic string `json:"topic,omitempty"`
+}
+
+// Validate validates this get organization early access features o k body items0
+func (o *GetOrganizationEarlyAccessFeaturesOKBodyItems0) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.validateDescriptions(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *GetOrganizationEarlyAccessFeaturesOKBodyItems0) validateDescriptions(formats strfmt.Registry) error {
+	if swag.IsZero(o.Descriptions) { // not required
+		return nil
+	}
+
+	if o.Descriptions != nil {
+		if err := o.Descriptions.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("descriptions")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("descriptions")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
+// ContextValidate validate this get organization early access features o k body items0 based on the context it is used
+func (o *GetOrganizationEarlyAccessFeaturesOKBodyItems0) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.contextValidateDescriptions(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *GetOrganizationEarlyAccessFeaturesOKBodyItems0) contextValidateDescriptions(ctx context.Context, formats strfmt.Registry) error {
+
+	if o.Descriptions != nil {
+		if err := o.Descriptions.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("descriptions")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("descriptions")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *GetOrganizationEarlyAccessFeaturesOKBodyItems0) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *GetOrganizationEarlyAccessFeaturesOKBodyItems0) UnmarshalBinary(b []byte) error {
+	var res GetOrganizationEarlyAccessFeaturesOKBodyItems0
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
+	return nil
+}
+
+/*
+GetOrganizationEarlyAccessFeaturesOKBodyItems0Descriptions Descriptions of the early access feature
+swagger:model GetOrganizationEarlyAccessFeaturesOKBodyItems0Descriptions
+*/
+type GetOrganizationEarlyAccessFeaturesOKBodyItems0Descriptions struct {
+
+	// Long description
+	Long string `json:"long,omitempty"`
+
+	// Short description
+	Short string `json:"short,omitempty"`
+}
+
+// Validate validates this get organization early access features o k body items0 descriptions
+func (o *GetOrganizationEarlyAccessFeaturesOKBodyItems0Descriptions) Validate(formats strfmt.Registry) error {
+	return nil
+}
+
+// ContextValidate validates this get organization early access features o k body items0 descriptions based on context it is used
+func (o *GetOrganizationEarlyAccessFeaturesOKBodyItems0Descriptions) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *GetOrganizationEarlyAccessFeaturesOKBodyItems0Descriptions) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *GetOrganizationEarlyAccessFeaturesOKBodyItems0Descriptions) UnmarshalBinary(b []byte) error {
+	var res GetOrganizationEarlyAccessFeaturesOKBodyItems0Descriptions
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
 	return nil
 }

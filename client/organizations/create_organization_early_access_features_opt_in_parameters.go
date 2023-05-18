@@ -64,7 +64,10 @@ type CreateOrganizationEarlyAccessFeaturesOptInParams struct {
 	// CreateOrganizationEarlyAccessFeaturesOptIn.
 	CreateOrganizationEarlyAccessFeaturesOptIn CreateOrganizationEarlyAccessFeaturesOptInBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

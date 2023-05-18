@@ -61,10 +61,16 @@ UpdateOrganizationConfigTemplateParams contains all the parameters to send to th
 */
 type UpdateOrganizationConfigTemplateParams struct {
 
-	// ConfigTemplateID.
+	/* ConfigTemplateID.
+
+	   Config template ID
+	*/
 	ConfigTemplateID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationConfigTemplate.

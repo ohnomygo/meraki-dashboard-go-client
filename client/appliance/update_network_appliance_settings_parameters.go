@@ -61,7 +61,10 @@ UpdateNetworkApplianceSettingsParams contains all the parameters to send to the 
 */
 type UpdateNetworkApplianceSettingsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceSettings.

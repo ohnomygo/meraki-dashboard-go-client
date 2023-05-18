@@ -61,10 +61,16 @@ UpdateOrganizationAlertsProfileParams contains all the parameters to send to the
 */
 type UpdateOrganizationAlertsProfileParams struct {
 
-	// AlertConfigID.
+	/* AlertConfigID.
+
+	   Alert config ID
+	*/
 	AlertConfigID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationAlertsProfile.

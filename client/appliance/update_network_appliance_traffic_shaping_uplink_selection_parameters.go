@@ -61,7 +61,10 @@ UpdateNetworkApplianceTrafficShapingUplinkSelectionParams contains all the param
 */
 type UpdateNetworkApplianceTrafficShapingUplinkSelectionParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceTrafficShapingUplinkSelection.

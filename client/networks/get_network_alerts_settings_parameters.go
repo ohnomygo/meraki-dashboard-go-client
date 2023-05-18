@@ -61,7 +61,10 @@ GetNetworkAlertsSettingsParams contains all the parameters to send to the API en
 */
 type GetNetworkAlertsSettingsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

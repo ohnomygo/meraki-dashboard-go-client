@@ -61,7 +61,10 @@ GetDeviceCameraSenseParams contains all the parameters to send to the API endpoi
 */
 type GetDeviceCameraSenseParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

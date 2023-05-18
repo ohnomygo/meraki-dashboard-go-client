@@ -61,10 +61,16 @@ DeleteNetworkWirelessRfProfileParams contains all the parameters to send to the 
 */
 type DeleteNetworkWirelessRfProfileParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// RfProfileID.
+	/* RfProfileID.
+
+	   Rf profile ID
+	*/
 	RfProfileID string
 
 	timeout    time.Duration

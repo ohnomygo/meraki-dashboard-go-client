@@ -64,7 +64,10 @@ type CreateNetworkApplianceTrafficShapingCustomPerformanceClassParams struct {
 	// CreateNetworkApplianceTrafficShapingCustomPerformanceClass.
 	CreateNetworkApplianceTrafficShapingCustomPerformanceClass CreateNetworkApplianceTrafficShapingCustomPerformanceClassBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

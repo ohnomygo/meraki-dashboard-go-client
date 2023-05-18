@@ -61,7 +61,10 @@ GetDeviceAppliancePrefixesDelegatedParams contains all the parameters to send to
 */
 type GetDeviceAppliancePrefixesDelegatedParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

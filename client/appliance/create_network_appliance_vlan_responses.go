@@ -108,7 +108,7 @@ func (o *CreateNetworkApplianceVlanCreated) readResponse(response runtime.Client
 
 /*
 CreateNetworkApplianceVlanBody create network appliance vlan body
-// Example: {"applianceIp":"192.168.1.2","groupPolicyId":"101","id":"1234","name":"My VLAN","subnet":"192.168.1.0/24"}
+// Example: {"applianceIp":"192.168.1.2","cidr":"192.168.1.0/24","groupPolicyId":"101","id":"1234","ipv6":{"enabled":true,"prefixAssignments":[{"autonomous":false,"origin":{"interfaces":["wan0"],"type":"internet"},"staticApplianceIp6":"2001:db8:3c4d:15::1","staticPrefix":"2001:db8:3c4d:15::/64"}]},"mandatoryDhcp":{"enabled":true},"mask":28,"name":"My VLAN","subnet":"192.168.1.0/24","templateVlanType":"same"}
 swagger:model CreateNetworkApplianceVlanBody
 */
 type CreateNetworkApplianceVlanBody struct {

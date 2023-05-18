@@ -68,7 +68,10 @@ type GetNetworkSensorAlertsOverviewByMetricParams struct {
 	*/
 	Interval *int64
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* T0.

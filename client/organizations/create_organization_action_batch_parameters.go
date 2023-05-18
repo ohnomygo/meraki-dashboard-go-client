@@ -64,7 +64,10 @@ type CreateOrganizationActionBatchParams struct {
 	// CreateOrganizationActionBatch.
 	CreateOrganizationActionBatch CreateOrganizationActionBatchBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

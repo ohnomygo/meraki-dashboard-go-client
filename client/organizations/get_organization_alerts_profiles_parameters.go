@@ -61,7 +61,10 @@ GetOrganizationAlertsProfilesParams contains all the parameters to send to the A
 */
 type GetOrganizationAlertsProfilesParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

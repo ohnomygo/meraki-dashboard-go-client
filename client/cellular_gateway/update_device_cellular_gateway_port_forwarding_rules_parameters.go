@@ -61,7 +61,10 @@ UpdateDeviceCellularGatewayPortForwardingRulesParams contains all the parameters
 */
 type UpdateDeviceCellularGatewayPortForwardingRulesParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceCellularGatewayPortForwardingRules.

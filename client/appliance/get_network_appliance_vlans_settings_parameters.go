@@ -61,7 +61,10 @@ GetNetworkApplianceVlansSettingsParams contains all the parameters to send to th
 */
 type GetNetworkApplianceVlansSettingsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

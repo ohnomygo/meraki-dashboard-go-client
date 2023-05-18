@@ -44,6 +44,10 @@ type ClientService interface {
 
 	GetNetworkSensorAlertsProfiles(params *GetNetworkSensorAlertsProfilesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetNetworkSensorAlertsProfilesOK, error)
 
+	GetNetworkSensorMqttBroker(params *GetNetworkSensorMqttBrokerParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetNetworkSensorMqttBrokerOK, error)
+
+	GetNetworkSensorMqttBrokers(params *GetNetworkSensorMqttBrokersParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetNetworkSensorMqttBrokersOK, error)
+
 	GetNetworkSensorRelationships(params *GetNetworkSensorRelationshipsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetNetworkSensorRelationshipsOK, error)
 
 	GetOrganizationSensorReadingsHistory(params *GetOrganizationSensorReadingsHistoryParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrganizationSensorReadingsHistoryOK, error)
@@ -53,6 +57,8 @@ type ClientService interface {
 	UpdateDeviceSensorRelationships(params *UpdateDeviceSensorRelationshipsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateDeviceSensorRelationshipsOK, error)
 
 	UpdateNetworkSensorAlertsProfile(params *UpdateNetworkSensorAlertsProfileParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateNetworkSensorAlertsProfileOK, error)
+
+	UpdateNetworkSensorMqttBroker(params *UpdateNetworkSensorMqttBrokerParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateNetworkSensorMqttBrokerOK, error)
 
 	SetTransport(transport runtime.ClientTransport)
 }
@@ -345,6 +351,88 @@ func (a *Client) GetNetworkSensorAlertsProfiles(params *GetNetworkSensorAlertsPr
 }
 
 /*
+GetNetworkSensorMqttBroker returns the sensor settings of an m q t t broker
+
+Return the sensor settings of an MQTT broker. To get the broker itself, use /networks/{networkId}/mqttBrokers/{mqttBrokerId}.
+*/
+func (a *Client) GetNetworkSensorMqttBroker(params *GetNetworkSensorMqttBrokerParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetNetworkSensorMqttBrokerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewGetNetworkSensorMqttBrokerParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "getNetworkSensorMqttBroker",
+		Method:             "GET",
+		PathPattern:        "/networks/{networkId}/sensor/mqttBrokers/{mqttBrokerId}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &GetNetworkSensorMqttBrokerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*GetNetworkSensorMqttBrokerOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for getNetworkSensorMqttBroker: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
+GetNetworkSensorMqttBrokers lists the sensor settings of all m q t t brokers for this network
+
+List the sensor settings of all MQTT brokers for this network. To get the brokers themselves, use /networks/{networkId}/mqttBrokers.
+*/
+func (a *Client) GetNetworkSensorMqttBrokers(params *GetNetworkSensorMqttBrokersParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetNetworkSensorMqttBrokersOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewGetNetworkSensorMqttBrokersParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "getNetworkSensorMqttBrokers",
+		Method:             "GET",
+		PathPattern:        "/networks/{networkId}/sensor/mqttBrokers",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &GetNetworkSensorMqttBrokersReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*GetNetworkSensorMqttBrokersOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for getNetworkSensorMqttBrokers: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
 GetNetworkSensorRelationships lists the sensor roles for devices in a given network
 
 List the sensor roles for devices in a given network
@@ -546,6 +634,47 @@ func (a *Client) UpdateNetworkSensorAlertsProfile(params *UpdateNetworkSensorAle
 	// unexpected success response
 	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
 	msg := fmt.Sprintf("unexpected success response for updateNetworkSensorAlertsProfile: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
+UpdateNetworkSensorMqttBroker updates the sensor settings of an m q t t broker
+
+Update the sensor settings of an MQTT broker. To update the broker itself, use /networks/{networkId}/mqttBrokers/{mqttBrokerId}.
+*/
+func (a *Client) UpdateNetworkSensorMqttBroker(params *UpdateNetworkSensorMqttBrokerParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateNetworkSensorMqttBrokerOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUpdateNetworkSensorMqttBrokerParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "updateNetworkSensorMqttBroker",
+		Method:             "PUT",
+		PathPattern:        "/networks/{networkId}/sensor/mqttBrokers/{mqttBrokerId}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"https"},
+		Params:             params,
+		Reader:             &UpdateNetworkSensorMqttBrokerReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*UpdateNetworkSensorMqttBrokerOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for updateNetworkSensorMqttBroker: API contract not enforced by server. Client expected to get an error, but got: %T", result)
 	panic(msg)
 }
 

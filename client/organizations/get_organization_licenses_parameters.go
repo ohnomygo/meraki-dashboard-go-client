@@ -80,7 +80,10 @@ type GetOrganizationLicensesParams struct {
 	*/
 	NetworkID *string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* PerPage.

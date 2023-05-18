@@ -68,7 +68,10 @@ type GetNetworkWirelessRfProfilesParams struct {
 	*/
 	IncludeTemplateProfiles *bool
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

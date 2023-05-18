@@ -74,7 +74,10 @@ type GetDeviceCameraAnalyticsZoneHistoryParams struct {
 	*/
 	Resolution *int64
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	/* T0.
@@ -97,7 +100,10 @@ type GetDeviceCameraAnalyticsZoneHistoryParams struct {
 	*/
 	Timespan *float32
 
-	// ZoneID.
+	/* ZoneID.
+
+	   Zone ID
+	*/
 	ZoneID string
 
 	timeout    time.Duration

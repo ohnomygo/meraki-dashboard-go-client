@@ -61,7 +61,10 @@ GetOrganizationSamlRolesParams contains all the parameters to send to the API en
 */
 type GetOrganizationSamlRolesParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

@@ -61,10 +61,16 @@ GetNetworkSmDeviceSoftwaresParams contains all the parameters to send to the API
 */
 type GetNetworkSmDeviceSoftwaresParams struct {
 
-	// DeviceID.
+	/* DeviceID.
+
+	   Device ID
+	*/
 	DeviceID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

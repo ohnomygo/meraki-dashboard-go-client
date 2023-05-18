@@ -61,7 +61,10 @@ GetOrganizationApplianceSecurityIntrusionParams contains all the parameters to s
 */
 type GetOrganizationApplianceSecurityIntrusionParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

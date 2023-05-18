@@ -289,8 +289,8 @@ type UpdateNetworkWirelessSsidBody struct {
 	// Specify your walled garden by entering an array of addresses, ranges using CIDR notation, domain names, and domain wildcards (e.g. '192.168.1.1/24', '192.168.37.10/32', 'www.yahoo.com', '*.google.com']). Meraki's splash page is automatically included in your walled garden.
 	WalledGardenRanges []string `json:"walledGardenRanges"`
 
-	// The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode' or 'WPA3 only')
-	// Enum: [WPA1 and WPA2 WPA1 only WPA2 only WPA3 Transition Mode WPA3 only]
+	// The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode', 'WPA3 only' or 'WPA3 192-bit Security')
+	// Enum: [WPA1 and WPA2 WPA1 only WPA2 only WPA3 192-bit Security WPA3 Transition Mode WPA3 only]
 	WpaEncryptionMode string `json:"wpaEncryptionMode,omitempty"`
 }
 
@@ -1003,7 +1003,7 @@ var updateNetworkWirelessSsidBodyTypeWpaEncryptionModePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["WPA1 and WPA2","WPA1 only","WPA2 only","WPA3 Transition Mode","WPA3 only"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["WPA1 and WPA2","WPA1 only","WPA2 only","WPA3 192-bit Security","WPA3 Transition Mode","WPA3 only"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -1021,6 +1021,9 @@ const (
 
 	// UpdateNetworkWirelessSsidBodyWpaEncryptionModeWPA2Only captures enum value "WPA2 only"
 	UpdateNetworkWirelessSsidBodyWpaEncryptionModeWPA2Only string = "WPA2 only"
+
+	// UpdateNetworkWirelessSsidBodyWpaEncryptionModeWPA3192DashBitSecurity captures enum value "WPA3 192-bit Security"
+	UpdateNetworkWirelessSsidBodyWpaEncryptionModeWPA3192DashBitSecurity string = "WPA3 192-bit Security"
 
 	// UpdateNetworkWirelessSsidBodyWpaEncryptionModeWPA3TransitionMode captures enum value "WPA3 Transition Mode"
 	UpdateNetworkWirelessSsidBodyWpaEncryptionModeWPA3TransitionMode string = "WPA3 Transition Mode"

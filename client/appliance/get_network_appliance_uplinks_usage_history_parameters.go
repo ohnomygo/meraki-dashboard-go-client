@@ -62,7 +62,10 @@ GetNetworkApplianceUplinksUsageHistoryParams contains all the parameters to send
 */
 type GetNetworkApplianceUplinksUsageHistoryParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* Resolution.

@@ -62,7 +62,10 @@ GetNetworkClientsOverviewParams contains all the parameters to send to the API e
 */
 type GetNetworkClientsOverviewParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* Resolution.

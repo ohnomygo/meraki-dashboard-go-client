@@ -61,10 +61,16 @@ DeleteNetworkCameraWirelessProfileParams contains all the parameters to send to 
 */
 type DeleteNetworkCameraWirelessProfileParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// WirelessProfileID.
+	/* WirelessProfileID.
+
+	   Wireless profile ID
+	*/
 	WirelessProfileID string
 
 	timeout    time.Duration

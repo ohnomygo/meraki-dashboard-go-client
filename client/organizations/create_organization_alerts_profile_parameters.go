@@ -64,7 +64,10 @@ type CreateOrganizationAlertsProfileParams struct {
 	// CreateOrganizationAlertsProfile.
 	CreateOrganizationAlertsProfile CreateOrganizationAlertsProfileBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

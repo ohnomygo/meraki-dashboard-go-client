@@ -61,10 +61,16 @@ DeleteOrganizationPolicyObjectParams contains all the parameters to send to the 
 */
 type DeleteOrganizationPolicyObjectParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
-	// PolicyObjectID.
+	/* PolicyObjectID.
+
+	   Policy object ID
+	*/
 	PolicyObjectID string
 
 	timeout    time.Duration

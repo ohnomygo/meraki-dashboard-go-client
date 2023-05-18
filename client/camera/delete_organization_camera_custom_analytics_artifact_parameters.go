@@ -61,10 +61,16 @@ DeleteOrganizationCameraCustomAnalyticsArtifactParams contains all the parameter
 */
 type DeleteOrganizationCameraCustomAnalyticsArtifactParams struct {
 
-	// ArtifactID.
+	/* ArtifactID.
+
+	   Artifact ID
+	*/
 	ArtifactID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

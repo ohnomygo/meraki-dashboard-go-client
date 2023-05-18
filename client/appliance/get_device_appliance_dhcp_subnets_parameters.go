@@ -61,7 +61,10 @@ GetDeviceApplianceDhcpSubnetsParams contains all the parameters to send to the A
 */
 type GetDeviceApplianceDhcpSubnetsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

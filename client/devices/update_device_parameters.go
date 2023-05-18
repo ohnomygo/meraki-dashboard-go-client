@@ -61,7 +61,10 @@ UpdateDeviceParams contains all the parameters to send to the API endpoint
 */
 type UpdateDeviceParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDevice.

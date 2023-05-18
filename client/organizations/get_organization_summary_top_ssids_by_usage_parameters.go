@@ -62,7 +62,10 @@ GetOrganizationSummaryTopSsidsByUsageParams contains all the parameters to send 
 */
 type GetOrganizationSummaryTopSsidsByUsageParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* T0.

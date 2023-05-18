@@ -61,7 +61,10 @@ SplitNetworkParams contains all the parameters to send to the API endpoint
 */
 type SplitNetworkParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

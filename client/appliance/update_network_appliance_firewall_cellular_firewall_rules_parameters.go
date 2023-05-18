@@ -61,7 +61,10 @@ UpdateNetworkApplianceFirewallCellularFirewallRulesParams contains all the param
 */
 type UpdateNetworkApplianceFirewallCellularFirewallRulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceFirewallCellularFirewallRules.

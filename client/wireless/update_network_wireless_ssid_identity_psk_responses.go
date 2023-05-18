@@ -10,9 +10,11 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
+	"github.com/go-openapi/validate"
 )
 
 // UpdateNetworkWirelessSsidIdentityPskReader is a Reader for the UpdateNetworkWirelessSsidIdentityPsk structure.
@@ -102,10 +104,14 @@ func (o *UpdateNetworkWirelessSsidIdentityPskOK) readResponse(response runtime.C
 
 /*
 UpdateNetworkWirelessSsidIdentityPskBody update network wireless ssid identity psk body
-// Example: {"expiresAt":"2018-02-11T00:00:00Z","groupPolicyId":"101","id":"1284392014819","name":"Sample Identity PSK","passphrase":"NIalareK"}
+// Example: {"expiresAt":"2018-02-11T00:00:00.090210Z","groupPolicyId":"101","id":"1284392014819","name":"Sample Identity PSK","passphrase":"secret"}
 swagger:model UpdateNetworkWirelessSsidIdentityPskBody
 */
 type UpdateNetworkWirelessSsidIdentityPskBody struct {
+
+	// Timestamp for when the Identity PSK expires, or 'null' to never expire
+	// Format: date-time
+	ExpiresAt strfmt.DateTime `json:"expiresAt,omitempty"`
 
 	// The group policy to be applied to clients
 	GroupPolicyID string `json:"groupPolicyId,omitempty"`
@@ -119,6 +125,27 @@ type UpdateNetworkWirelessSsidIdentityPskBody struct {
 
 // Validate validates this update network wireless ssid identity psk body
 func (o *UpdateNetworkWirelessSsidIdentityPskBody) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.validateExpiresAt(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *UpdateNetworkWirelessSsidIdentityPskBody) validateExpiresAt(formats strfmt.Registry) error {
+	if swag.IsZero(o.ExpiresAt) { // not required
+		return nil
+	}
+
+	if err := validate.FormatOf("updateNetworkWirelessSsidIdentityPsk"+"."+"expiresAt", "body", "date-time", o.ExpiresAt.String(), formats); err != nil {
+		return err
+	}
+
 	return nil
 }
 

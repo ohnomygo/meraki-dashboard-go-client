@@ -61,10 +61,16 @@ GetNetworkWirelessSsidIdentityPsksParams contains all the parameters to send to 
 */
 type GetNetworkWirelessSsidIdentityPsksParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	timeout    time.Duration

@@ -61,10 +61,16 @@ GetNetworkWirelessSsidBonjourForwardingParams contains all the parameters to sen
 */
 type GetNetworkWirelessSsidBonjourForwardingParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	timeout    time.Duration

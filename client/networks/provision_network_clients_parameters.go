@@ -61,7 +61,10 @@ ProvisionNetworkClientsParams contains all the parameters to send to the API end
 */
 type ProvisionNetworkClientsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// ProvisionNetworkClients.

@@ -61,10 +61,16 @@ GetNetworkWirelessSsidEapOverrideParams contains all the parameters to send to t
 */
 type GetNetworkWirelessSsidEapOverrideParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	timeout    time.Duration

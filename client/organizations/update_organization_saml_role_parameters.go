@@ -61,10 +61,16 @@ UpdateOrganizationSamlRoleParams contains all the parameters to send to the API 
 */
 type UpdateOrganizationSamlRoleParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
-	// SamlRoleID.
+	/* SamlRoleID.
+
+	   Saml role ID
+	*/
 	SamlRoleID string
 
 	// UpdateOrganizationSamlRole.

@@ -61,10 +61,16 @@ UpdateNetworkApplianceTrafficShapingCustomPerformanceClassParams contains all th
 */
 type UpdateNetworkApplianceTrafficShapingCustomPerformanceClassParams struct {
 
-	// CustomPerformanceClassID.
+	/* CustomPerformanceClassID.
+
+	   Custom performance class ID
+	*/
 	CustomPerformanceClassID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceTrafficShapingCustomPerformanceClass.

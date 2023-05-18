@@ -61,7 +61,10 @@ GetOrganizationApplianceVpnThirdPartyVPNPeersParams contains all the parameters 
 */
 type GetOrganizationApplianceVpnThirdPartyVPNPeersParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

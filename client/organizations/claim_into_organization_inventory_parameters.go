@@ -64,7 +64,10 @@ type ClaimIntoOrganizationInventoryParams struct {
 	// ClaimIntoOrganizationInventory.
 	ClaimIntoOrganizationInventory ClaimIntoOrganizationInventoryBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

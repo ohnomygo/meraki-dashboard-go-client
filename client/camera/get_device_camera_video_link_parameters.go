@@ -61,7 +61,10 @@ GetDeviceCameraVideoLinkParams contains all the parameters to send to the API en
 */
 type GetDeviceCameraVideoLinkParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	/* Timestamp.

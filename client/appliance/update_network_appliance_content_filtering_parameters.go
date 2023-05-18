@@ -61,7 +61,10 @@ UpdateNetworkApplianceContentFilteringParams contains all the parameters to send
 */
 type UpdateNetworkApplianceContentFilteringParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceContentFiltering.

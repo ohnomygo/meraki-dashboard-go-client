@@ -61,7 +61,10 @@ UpdateNetworkApplianceTrafficShapingUplinkBandwidthParams contains all the param
 */
 type UpdateNetworkApplianceTrafficShapingUplinkBandwidthParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceTrafficShapingUplinkBandwidth.

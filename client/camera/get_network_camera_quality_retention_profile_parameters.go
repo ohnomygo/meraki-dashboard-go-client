@@ -61,10 +61,16 @@ GetNetworkCameraQualityRetentionProfileParams contains all the parameters to sen
 */
 type GetNetworkCameraQualityRetentionProfileParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// QualityRetentionProfileID.
+	/* QualityRetentionProfileID.
+
+	   Quality retention profile ID
+	*/
 	QualityRetentionProfileID string
 
 	timeout    time.Duration

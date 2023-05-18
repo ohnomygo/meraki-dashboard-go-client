@@ -61,10 +61,16 @@ GetNetworkClientSplashAuthorizationStatusParams contains all the parameters to s
 */
 type GetNetworkClientSplashAuthorizationStatusParams struct {
 
-	// ClientID.
+	/* ClientID.
+
+	   Client ID
+	*/
 	ClientID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ GetNetworkCellularGatewayConnectivityMonitoringDestinationsParams contains all t
 */
 type GetNetworkCellularGatewayConnectivityMonitoringDestinationsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

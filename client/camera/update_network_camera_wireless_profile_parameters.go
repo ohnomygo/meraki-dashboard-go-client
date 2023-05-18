@@ -61,13 +61,19 @@ UpdateNetworkCameraWirelessProfileParams contains all the parameters to send to 
 */
 type UpdateNetworkCameraWirelessProfileParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkCameraWirelessProfile.
 	UpdateNetworkCameraWirelessProfile UpdateNetworkCameraWirelessProfileBody
 
-	// WirelessProfileID.
+	/* WirelessProfileID.
+
+	   Wireless profile ID
+	*/
 	WirelessProfileID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ ReleaseFromOrganizationInventoryParams contains all the parameters to send to th
 */
 type ReleaseFromOrganizationInventoryParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// ReleaseFromOrganizationInventory.

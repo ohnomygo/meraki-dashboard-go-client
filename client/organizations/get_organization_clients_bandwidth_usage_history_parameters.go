@@ -62,7 +62,10 @@ GetOrganizationClientsBandwidthUsageHistoryParams contains all the parameters to
 */
 type GetOrganizationClientsBandwidthUsageHistoryParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* T0.

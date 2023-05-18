@@ -238,6 +238,9 @@ type UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0 struct {
 	// When this feature is on, the Meraki device will advertise routes learned from other Autonomous Systems, thereby allowing traffic between Autonomous Systems to transit this AS. When absent, it defaults to false.
 	AllowTransit bool `json:"allowTransit,omitempty"`
 
+	// authentication
+	Authentication *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0Authentication `json:"authentication,omitempty"`
+
 	// The EBGP hold timer in seconds for each neighbor. The EBGP hold timer must be an integer between 12 and 240.
 	// Required: true
 	EbgpHoldTimer *int64 `json:"ebgpHoldTimer"`
@@ -252,17 +255,30 @@ type UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0 struct {
 	// ipv6
 	IPV6 *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0IPV6 `json:"ipv6,omitempty"`
 
+	// The IPv4 address of the remote BGP peer that will establish a TCP session with the local MX.
+	NextHopIP string `json:"nextHopIp,omitempty"`
+
 	// The receive limit is the maximum number of routes that can be received from any BGP peer. The receive limit must be an integer between 0 and 4294967295. When absent, it defaults to 0.
 	ReceiveLimit int64 `json:"receiveLimit,omitempty"`
 
 	// Remote ASN of the neighbor. The remote ASN must be an integer between 1 and 4294967295.
 	// Required: true
 	RemoteAsNumber *int64 `json:"remoteAsNumber"`
+
+	// The output interface for peering with the remote BGP peer. Valid values are: 'wired0', 'wired1' or 'vlan{VLAN ID}'(e.g. 'vlan123').
+	SourceInterface string `json:"sourceInterface,omitempty"`
+
+	// ttl security
+	TTLSecurity *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0TTLSecurity `json:"ttlSecurity,omitempty"`
 }
 
 // Validate validates this update network appliance vpn bgp params body neighbors items0
 func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0) Validate(formats strfmt.Registry) error {
 	var res []error
+
+	if err := o.validateAuthentication(formats); err != nil {
+		res = append(res, err)
+	}
 
 	if err := o.validateEbgpHoldTimer(formats); err != nil {
 		res = append(res, err)
@@ -280,9 +296,32 @@ func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0) Validate(formats
 		res = append(res, err)
 	}
 
+	if err := o.validateTTLSecurity(formats); err != nil {
+		res = append(res, err)
+	}
+
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0) validateAuthentication(formats strfmt.Registry) error {
+	if swag.IsZero(o.Authentication) { // not required
+		return nil
+	}
+
+	if o.Authentication != nil {
+		if err := o.Authentication.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("authentication")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("authentication")
+			}
+			return err
+		}
+	}
+
 	return nil
 }
 
@@ -332,17 +371,60 @@ func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0) validateRemoteAs
 	return nil
 }
 
+func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0) validateTTLSecurity(formats strfmt.Registry) error {
+	if swag.IsZero(o.TTLSecurity) { // not required
+		return nil
+	}
+
+	if o.TTLSecurity != nil {
+		if err := o.TTLSecurity.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("ttlSecurity")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("ttlSecurity")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
 // ContextValidate validate this update network appliance vpn bgp params body neighbors items0 based on the context it is used
 func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
+	if err := o.contextValidateAuthentication(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := o.contextValidateIPV6(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := o.contextValidateTTLSecurity(ctx, formats); err != nil {
 		res = append(res, err)
 	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0) contextValidateAuthentication(ctx context.Context, formats strfmt.Registry) error {
+
+	if o.Authentication != nil {
+		if err := o.Authentication.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("authentication")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("authentication")
+			}
+			return err
+		}
+	}
+
 	return nil
 }
 
@@ -362,6 +444,22 @@ func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0) contextValidateI
 	return nil
 }
 
+func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0) contextValidateTTLSecurity(ctx context.Context, formats strfmt.Registry) error {
+
+	if o.TTLSecurity != nil {
+		if err := o.TTLSecurity.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("ttlSecurity")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("ttlSecurity")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
 // MarshalBinary interface implementation
 func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0) MarshalBinary() ([]byte, error) {
 	if o == nil {
@@ -373,6 +471,44 @@ func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0) MarshalBinary() 
 // UnmarshalBinary interface implementation
 func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0) UnmarshalBinary(b []byte) error {
 	var res UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
+	return nil
+}
+
+/*
+UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0Authentication Authentication settings between BGP peers.
+swagger:model UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0Authentication
+*/
+type UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0Authentication struct {
+
+	// Password to configure MD5 authentication between BGP peers.
+	Password string `json:"password,omitempty"`
+}
+
+// Validate validates this update network appliance vpn bgp params body neighbors items0 authentication
+func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0Authentication) Validate(formats strfmt.Registry) error {
+	return nil
+}
+
+// ContextValidate validates this update network appliance vpn bgp params body neighbors items0 authentication based on context it is used
+func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0Authentication) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0Authentication) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0Authentication) UnmarshalBinary(b []byte) error {
+	var res UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0Authentication
 	if err := swag.ReadJSON(b, &res); err != nil {
 		return err
 	}
@@ -430,6 +566,44 @@ func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0IPV6) MarshalBinar
 // UnmarshalBinary interface implementation
 func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0IPV6) UnmarshalBinary(b []byte) error {
 	var res UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0IPV6
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
+	return nil
+}
+
+/*
+UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0TTLSecurity Settings for BGP TTL security to protect BGP peering sessions from forged IP attacks.
+swagger:model UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0TTLSecurity
+*/
+type UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0TTLSecurity struct {
+
+	// Boolean value to enable or disable BGP TTL security.
+	Enabled bool `json:"enabled,omitempty"`
+}
+
+// Validate validates this update network appliance vpn bgp params body neighbors items0 TTL security
+func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0TTLSecurity) Validate(formats strfmt.Registry) error {
+	return nil
+}
+
+// ContextValidate validates this update network appliance vpn bgp params body neighbors items0 TTL security based on context it is used
+func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0TTLSecurity) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0TTLSecurity) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0TTLSecurity) UnmarshalBinary(b []byte) error {
+	var res UpdateNetworkApplianceVpnBgpParamsBodyNeighborsItems0TTLSecurity
 	if err := swag.ReadJSON(b, &res); err != nil {
 		return err
 	}

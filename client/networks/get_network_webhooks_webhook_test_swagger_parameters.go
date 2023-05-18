@@ -61,10 +61,16 @@ GetNetworkWebhooksWebhookTestParams contains all the parameters to send to the A
 */
 type GetNetworkWebhooksWebhookTestParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// WebhookTestID.
+	/* WebhookTestID.
+
+	   Webhook test ID
+	*/
 	WebhookTestID string
 
 	timeout    time.Duration

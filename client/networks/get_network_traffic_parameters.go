@@ -68,7 +68,10 @@ type GetNetworkTrafficParams struct {
 	*/
 	DeviceType *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* T0.

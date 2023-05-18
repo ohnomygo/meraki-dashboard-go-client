@@ -62,7 +62,10 @@ GetOrganizationSummaryTopClientsManufacturersByUsageParams contains all the para
 */
 type GetOrganizationSummaryTopClientsManufacturersByUsageParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* T0.

@@ -61,7 +61,10 @@ GetNetworkApplianceVpnSiteToSiteVpnParams contains all the parameters to send to
 */
 type GetNetworkApplianceVpnSiteToSiteVpnParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

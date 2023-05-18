@@ -62,7 +62,10 @@ GetNetworkBluetoothClientParams contains all the parameters to send to the API e
 */
 type GetNetworkBluetoothClientParams struct {
 
-	// BluetoothClientID.
+	/* BluetoothClientID.
+
+	   Bluetooth client ID
+	*/
 	BluetoothClientID string
 
 	/* ConnectivityHistoryTimespan.
@@ -77,7 +80,10 @@ type GetNetworkBluetoothClientParams struct {
 	*/
 	IncludeConnectivityHistory *bool
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

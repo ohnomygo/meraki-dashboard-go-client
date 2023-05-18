@@ -61,7 +61,10 @@ UpdateDeviceCellularSimsParams contains all the parameters to send to the API en
 */
 type UpdateDeviceCellularSimsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceCellularSims.

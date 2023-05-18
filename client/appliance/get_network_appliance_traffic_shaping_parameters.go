@@ -61,7 +61,10 @@ GetNetworkApplianceTrafficShapingParams contains all the parameters to send to t
 */
 type GetNetworkApplianceTrafficShapingParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

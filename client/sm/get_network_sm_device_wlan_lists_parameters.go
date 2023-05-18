@@ -61,10 +61,16 @@ GetNetworkSmDeviceWlanListsParams contains all the parameters to send to the API
 */
 type GetNetworkSmDeviceWlanListsParams struct {
 
-	// DeviceID.
+	/* DeviceID.
+
+	   Device ID
+	*/
 	DeviceID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

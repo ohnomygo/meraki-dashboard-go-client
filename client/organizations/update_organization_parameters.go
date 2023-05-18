@@ -61,7 +61,10 @@ UpdateOrganizationParams contains all the parameters to send to the API endpoint
 */
 type UpdateOrganizationParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganization.

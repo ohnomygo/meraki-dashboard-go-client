@@ -61,10 +61,16 @@ UpdateNetworkWirelessSsidFirewallL7FirewallRulesParams contains all the paramete
 */
 type UpdateNetworkWirelessSsidFirewallL7FirewallRulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	// UpdateNetworkWirelessSsidFirewallL7FirewallRules.

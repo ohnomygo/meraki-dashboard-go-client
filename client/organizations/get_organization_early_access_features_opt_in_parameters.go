@@ -61,10 +61,16 @@ GetOrganizationEarlyAccessFeaturesOptInParams contains all the parameters to sen
 */
 type GetOrganizationEarlyAccessFeaturesOptInParams struct {
 
-	// OptInID.
+	/* OptInID.
+
+	   Opt in ID
+	*/
 	OptInID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ GetNetworkApplianceFirewallInboundCellularFirewallRulesParams contains all the p
 */
 type GetNetworkApplianceFirewallInboundCellularFirewallRulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

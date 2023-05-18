@@ -61,10 +61,16 @@ UpdateNetworkApplianceSsidParams contains all the parameters to send to the API 
 */
 type UpdateNetworkApplianceSsidParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	// UpdateNetworkApplianceSsid.

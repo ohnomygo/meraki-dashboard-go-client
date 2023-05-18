@@ -61,10 +61,16 @@ GetNetworkWirelessSsidSplashSettingsParams contains all the parameters to send t
 */
 type GetNetworkWirelessSsidSplashSettingsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	timeout    time.Duration

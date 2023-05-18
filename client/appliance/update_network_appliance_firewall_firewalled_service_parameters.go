@@ -61,10 +61,16 @@ UpdateNetworkApplianceFirewallFirewalledServiceParams contains all the parameter
 */
 type UpdateNetworkApplianceFirewallFirewalledServiceParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Service.
+	/* Service.
+
+	   Service
+	*/
 	Service string
 
 	// UpdateNetworkApplianceFirewallFirewalledService.

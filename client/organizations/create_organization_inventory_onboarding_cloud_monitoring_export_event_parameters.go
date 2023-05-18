@@ -64,7 +64,10 @@ type CreateOrganizationInventoryOnboardingCloudMonitoringExportEventParams struc
 	// CreateOrganizationInventoryOnboardingCloudMonitoringExportEvent.
 	CreateOrganizationInventoryOnboardingCloudMonitoringExportEvent CreateOrganizationInventoryOnboardingCloudMonitoringExportEventBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

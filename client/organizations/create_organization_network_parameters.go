@@ -64,7 +64,10 @@ type CreateOrganizationNetworkParams struct {
 	// CreateOrganizationNetwork.
 	CreateOrganizationNetwork CreateOrganizationNetworkBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

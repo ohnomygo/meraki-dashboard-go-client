@@ -61,7 +61,10 @@ GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesParams contains a
 */
 type GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

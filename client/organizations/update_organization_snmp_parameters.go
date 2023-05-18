@@ -61,7 +61,10 @@ UpdateOrganizationSnmpParams contains all the parameters to send to the API endp
 */
 type UpdateOrganizationSnmpParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationSnmp.

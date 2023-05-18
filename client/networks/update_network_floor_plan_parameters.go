@@ -61,10 +61,16 @@ UpdateNetworkFloorPlanParams contains all the parameters to send to the API endp
 */
 type UpdateNetworkFloorPlanParams struct {
 
-	// FloorPlanID.
+	/* FloorPlanID.
+
+	   Floor plan ID
+	*/
 	FloorPlanID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkFloorPlan.

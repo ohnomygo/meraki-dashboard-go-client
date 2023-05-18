@@ -64,7 +64,10 @@ type CreateNetworkSmTargetGroupParams struct {
 	// CreateNetworkSmTargetGroup.
 	CreateNetworkSmTargetGroup CreateNetworkSmTargetGroupBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

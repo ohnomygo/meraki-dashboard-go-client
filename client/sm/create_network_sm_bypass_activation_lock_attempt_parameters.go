@@ -64,7 +64,10 @@ type CreateNetworkSmBypassActivationLockAttemptParams struct {
 	// CreateNetworkSmBypassActivationLockAttempt.
 	CreateNetworkSmBypassActivationLockAttempt CreateNetworkSmBypassActivationLockAttemptBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ UpdateNetworkApplianceSingleLanParams contains all the parameters to send to the
 */
 type UpdateNetworkApplianceSingleLanParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceSingleLan.

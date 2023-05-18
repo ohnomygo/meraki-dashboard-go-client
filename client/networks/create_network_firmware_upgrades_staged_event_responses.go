@@ -1186,7 +1186,7 @@ func (o *CreateNetworkFirmwareUpgradesStagedEventOKBodyStagesItems0Milestones) U
 }
 
 /*
-CreateNetworkFirmwareUpgradesStagedEventParamsBodyProducts Contains information about the network to update
+CreateNetworkFirmwareUpgradesStagedEventParamsBodyProducts Contains firmware upgrade version information
 swagger:model CreateNetworkFirmwareUpgradesStagedEventParamsBodyProducts
 */
 type CreateNetworkFirmwareUpgradesStagedEventParamsBodyProducts struct {
@@ -1277,7 +1277,7 @@ func (o *CreateNetworkFirmwareUpgradesStagedEventParamsBodyProducts) UnmarshalBi
 }
 
 /*
-CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitch The network device to be updated
+CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitch Version information for the switch network being upgraded
 swagger:model CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitch
 */
 type CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitch struct {
@@ -1368,7 +1368,7 @@ func (o *CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitch) Unmar
 }
 
 /*
-CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitchNextUpgrade The pending firmware upgrade if it exists
+CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitchNextUpgrade The next upgrade version for the switch network
 swagger:model CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitchNextUpgrade
 */
 type CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitchNextUpgrade struct {
@@ -1459,7 +1459,7 @@ func (o *CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitchNextUpg
 }
 
 /*
-CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitchNextUpgradeToVersion The version to be updated to
+CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitchNextUpgradeToVersion The version to be updated to for switch devices
 swagger:model CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitchNextUpgradeToVersion
 */
 type CreateNetworkFirmwareUpgradesStagedEventParamsBodyProductsSwitchNextUpgradeToVersion struct {

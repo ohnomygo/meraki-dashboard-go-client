@@ -61,10 +61,16 @@ DeleteOrganizationBrandingPolicyParams contains all the parameters to send to th
 */
 type DeleteOrganizationBrandingPolicyParams struct {
 
-	// BrandingPolicyID.
+	/* BrandingPolicyID.
+
+	   Branding policy ID
+	*/
 	BrandingPolicyID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

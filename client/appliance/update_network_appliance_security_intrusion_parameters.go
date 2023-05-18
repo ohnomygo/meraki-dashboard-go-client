@@ -61,7 +61,10 @@ UpdateNetworkApplianceSecurityIntrusionParams contains all the parameters to sen
 */
 type UpdateNetworkApplianceSecurityIntrusionParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceSecurityIntrusion.

@@ -61,7 +61,10 @@ UpdateNetworkSmDevicesFieldsParams contains all the parameters to send to the AP
 */
 type UpdateNetworkSmDevicesFieldsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkSmDevicesFields.

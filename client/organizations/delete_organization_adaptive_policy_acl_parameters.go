@@ -61,10 +61,16 @@ DeleteOrganizationAdaptivePolicyACLParams contains all the parameters to send to
 */
 type DeleteOrganizationAdaptivePolicyACLParams struct {
 
-	// ACLID.
+	/* ACLID.
+
+	   Acl ID
+	*/
 	ACLID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

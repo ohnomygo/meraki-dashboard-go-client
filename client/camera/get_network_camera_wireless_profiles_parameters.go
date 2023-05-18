@@ -61,7 +61,10 @@ GetNetworkCameraWirelessProfilesParams contains all the parameters to send to th
 */
 type GetNetworkCameraWirelessProfilesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

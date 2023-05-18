@@ -80,7 +80,10 @@ type GetNetworkWirelessFailedConnectionsParams struct {
 	*/
 	ClientID *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* Serial.

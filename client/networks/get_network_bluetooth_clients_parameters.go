@@ -74,7 +74,10 @@ type GetNetworkBluetoothClientsParams struct {
 	*/
 	IncludeConnectivityHistory *bool
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* PerPage.

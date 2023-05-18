@@ -16,11 +16,12 @@ import (
 	"github.com/dashboard-api-go-swag/client/cellular_gateway"
 	"github.com/dashboard-api-go-swag/client/devices"
 	"github.com/dashboard-api-go-swag/client/insight"
+	"github.com/dashboard-api-go-swag/client/licensing"
 	"github.com/dashboard-api-go-swag/client/networks"
 	"github.com/dashboard-api-go-swag/client/organizations"
 	"github.com/dashboard-api-go-swag/client/sensor"
 	"github.com/dashboard-api-go-swag/client/sm"
-	"github.com/dashboard-api-go-swag/client/switch_meraki_dasboard_go_client"
+	"github.com/dashboard-api-go-swag/client/switch_operations"
 	"github.com/dashboard-api-go-swag/client/wireless"
 )
 
@@ -72,11 +73,12 @@ func New(transport runtime.ClientTransport, formats strfmt.Registry) *MerakiDash
 	cli.CellularGateway = cellular_gateway.New(transport, formats)
 	cli.Devices = devices.New(transport, formats)
 	cli.Insight = insight.New(transport, formats)
+	cli.Licensing = licensing.New(transport, formats)
 	cli.Networks = networks.New(transport, formats)
 	cli.Organizations = organizations.New(transport, formats)
 	cli.Sensor = sensor.New(transport, formats)
 	cli.Sm = sm.New(transport, formats)
-	cli.SwitchMerakiDasboardGoClient = switch_meraki_dasboard_go_client.New(transport, formats)
+	cli.SwitchOperations = switch_operations.New(transport, formats)
 	cli.Wireless = wireless.New(transport, formats)
 	return cli
 }
@@ -134,6 +136,8 @@ type MerakiDashboardAPI struct {
 
 	Insight insight.ClientService
 
+	Licensing licensing.ClientService
+
 	Networks networks.ClientService
 
 	Organizations organizations.ClientService
@@ -142,7 +146,7 @@ type MerakiDashboardAPI struct {
 
 	Sm sm.ClientService
 
-	SwitchMerakiDasboardGoClient switch_meraki_dasboard_go_client.ClientService
+	SwitchOperations switch_operations.ClientService
 
 	Wireless wireless.ClientService
 
@@ -158,10 +162,11 @@ func (c *MerakiDashboardAPI) SetTransport(transport runtime.ClientTransport) {
 	c.CellularGateway.SetTransport(transport)
 	c.Devices.SetTransport(transport)
 	c.Insight.SetTransport(transport)
+	c.Licensing.SetTransport(transport)
 	c.Networks.SetTransport(transport)
 	c.Organizations.SetTransport(transport)
 	c.Sensor.SetTransport(transport)
 	c.Sm.SetTransport(transport)
-	c.SwitchMerakiDasboardGoClient.SetTransport(transport)
+	c.SwitchOperations.SetTransport(transport)
 	c.Wireless.SetTransport(transport)
 }

@@ -61,7 +61,10 @@ GetNetworkCellularGatewayUplinkParams contains all the parameters to send to the
 */
 type GetNetworkCellularGatewayUplinkParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

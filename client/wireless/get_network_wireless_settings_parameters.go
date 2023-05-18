@@ -61,7 +61,10 @@ GetNetworkWirelessSettingsParams contains all the parameters to send to the API 
 */
 type GetNetworkWirelessSettingsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

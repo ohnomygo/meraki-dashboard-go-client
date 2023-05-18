@@ -61,7 +61,10 @@ GetNetworkSnmpParams contains all the parameters to send to the API endpoint
 */
 type GetNetworkSnmpParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

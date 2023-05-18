@@ -61,7 +61,10 @@ GetDeviceCameraQualityAndRetentionParams contains all the parameters to send to 
 */
 type GetDeviceCameraQualityAndRetentionParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

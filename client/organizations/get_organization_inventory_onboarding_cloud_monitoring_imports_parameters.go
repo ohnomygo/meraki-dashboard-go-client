@@ -68,7 +68,10 @@ type GetOrganizationInventoryOnboardingCloudMonitoringImportsParams struct {
 	*/
 	ImportIds []string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

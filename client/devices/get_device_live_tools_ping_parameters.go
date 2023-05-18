@@ -61,10 +61,16 @@ GetDeviceLiveToolsPingParams contains all the parameters to send to the API endp
 */
 type GetDeviceLiveToolsPingParams struct {
 
-	// ID.
+	/* ID.
+
+	   Id
+	*/
 	ID string
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

@@ -61,10 +61,16 @@ UpdateNetworkWebhooksHTTPServerParams contains all the parameters to send to the
 */
 type UpdateNetworkWebhooksHTTPServerParams struct {
 
-	// HTTPServerID.
+	/* HTTPServerID.
+
+	   Http server ID
+	*/
 	HTTPServerID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkWebhooksHTTPServer.

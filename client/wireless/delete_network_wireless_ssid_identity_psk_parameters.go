@@ -61,13 +61,22 @@ DeleteNetworkWirelessSsidIdentityPskParams contains all the parameters to send t
 */
 type DeleteNetworkWirelessSsidIdentityPskParams struct {
 
-	// IdentityPskID.
+	/* IdentityPskID.
+
+	   Identity psk ID
+	*/
 	IdentityPskID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	timeout    time.Duration

@@ -62,7 +62,10 @@ GetDeviceClientsParams contains all the parameters to send to the API endpoint
 */
 type GetDeviceClientsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	/* T0.

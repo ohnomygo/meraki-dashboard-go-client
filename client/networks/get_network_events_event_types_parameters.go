@@ -61,7 +61,10 @@ GetNetworkEventsEventTypesParams contains all the parameters to send to the API 
 */
 type GetNetworkEventsEventTypesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

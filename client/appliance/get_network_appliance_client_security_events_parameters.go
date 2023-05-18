@@ -62,7 +62,10 @@ GetNetworkApplianceClientSecurityEventsParams contains all the parameters to sen
 */
 type GetNetworkApplianceClientSecurityEventsParams struct {
 
-	// ClientID.
+	/* ClientID.
+
+	   Client ID
+	*/
 	ClientID string
 
 	/* EndingBefore.
@@ -71,7 +74,10 @@ type GetNetworkApplianceClientSecurityEventsParams struct {
 	*/
 	EndingBefore *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* PerPage.

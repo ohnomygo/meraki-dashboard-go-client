@@ -61,7 +61,10 @@ UpdateOrganizationApplianceSecurityIntrusionParams contains all the parameters t
 */
 type UpdateOrganizationApplianceSecurityIntrusionParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationApplianceSecurityIntrusion.

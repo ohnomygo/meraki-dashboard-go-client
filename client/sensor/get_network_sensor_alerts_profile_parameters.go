@@ -61,10 +61,16 @@ GetNetworkSensorAlertsProfileParams contains all the parameters to send to the A
 */
 type GetNetworkSensorAlertsProfileParams struct {
 
-	// ID.
+	/* ID.
+
+	   Id
+	*/
 	ID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

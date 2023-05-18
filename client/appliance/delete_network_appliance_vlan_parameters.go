@@ -61,10 +61,16 @@ DeleteNetworkApplianceVlanParams contains all the parameters to send to the API 
 */
 type DeleteNetworkApplianceVlanParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// VlanID.
+	/* VlanID.
+
+	   Vlan ID
+	*/
 	VlanID string
 
 	timeout    time.Duration

@@ -61,10 +61,16 @@ DeleteOrganizationEarlyAccessFeaturesOptInParams contains all the parameters to 
 */
 type DeleteOrganizationEarlyAccessFeaturesOptInParams struct {
 
-	// OptInID.
+	/* OptInID.
+
+	   Opt in ID
+	*/
 	OptInID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

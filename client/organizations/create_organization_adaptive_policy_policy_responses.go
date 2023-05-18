@@ -112,7 +112,6 @@ swagger:model CreateOrganizationAdaptivePolicyPolicyBody
 type CreateOrganizationAdaptivePolicyPolicyBody struct {
 
 	// An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
-	//
 	Acls []*CreateOrganizationAdaptivePolicyPolicyParamsBodyAclsItems0 `json:"acls"`
 
 	// destination group
@@ -120,7 +119,6 @@ type CreateOrganizationAdaptivePolicyPolicyBody struct {
 	DestinationGroup *CreateOrganizationAdaptivePolicyPolicyParamsBodyDestinationGroup `json:"destinationGroup"`
 
 	// The rule to apply if there is no matching ACL (default: "default")
-	//
 	// Enum: [allow default deny]
 	LastEntryRule string `json:"lastEntryRule,omitempty"`
 
@@ -401,7 +399,6 @@ func (o *CreateOrganizationAdaptivePolicyPolicyParamsBodyAclsItems0) UnmarshalBi
 
 /*
 CreateOrganizationAdaptivePolicyPolicyParamsBodyDestinationGroup The destination adaptive policy group (requires one unique attribute)
-//
 swagger:model CreateOrganizationAdaptivePolicyPolicyParamsBodyDestinationGroup
 */
 type CreateOrganizationAdaptivePolicyPolicyParamsBodyDestinationGroup struct {
@@ -446,7 +443,6 @@ func (o *CreateOrganizationAdaptivePolicyPolicyParamsBodyDestinationGroup) Unmar
 
 /*
 CreateOrganizationAdaptivePolicyPolicyParamsBodySourceGroup The source adaptive policy group (requires one unique attribute)
-//
 swagger:model CreateOrganizationAdaptivePolicyPolicyParamsBodySourceGroup
 */
 type CreateOrganizationAdaptivePolicyPolicyParamsBodySourceGroup struct {

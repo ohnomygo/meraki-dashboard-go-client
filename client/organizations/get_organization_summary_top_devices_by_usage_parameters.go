@@ -62,7 +62,10 @@ GetOrganizationSummaryTopDevicesByUsageParams contains all the parameters to sen
 */
 type GetOrganizationSummaryTopDevicesByUsageParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* T0.

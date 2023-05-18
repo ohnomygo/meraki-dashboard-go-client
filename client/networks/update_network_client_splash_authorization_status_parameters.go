@@ -61,10 +61,16 @@ UpdateNetworkClientSplashAuthorizationStatusParams contains all the parameters t
 */
 type UpdateNetworkClientSplashAuthorizationStatusParams struct {
 
-	// ClientID.
+	/* ClientID.
+
+	   Client ID
+	*/
 	ClientID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkClientSplashAuthorizationStatus.

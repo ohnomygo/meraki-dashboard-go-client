@@ -61,10 +61,16 @@ GetOrganizationCameraCustomAnalyticsArtifactParams contains all the parameters t
 */
 type GetOrganizationCameraCustomAnalyticsArtifactParams struct {
 
-	// ArtifactID.
+	/* ArtifactID.
+
+	   Artifact ID
+	*/
 	ArtifactID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

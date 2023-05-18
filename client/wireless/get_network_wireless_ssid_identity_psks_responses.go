@@ -10,9 +10,11 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
+	"github.com/go-openapi/validate"
 )
 
 // GetNetworkWirelessSsidIdentityPsksReader is a Reader for the GetNetworkWirelessSsidIdentityPsks structure.
@@ -109,8 +111,9 @@ type GetNetworkWirelessSsidIdentityPsksOKBodyItems0 struct {
 	// The email associated with the System's Manager User
 	Email string `json:"email,omitempty"`
 
-	// Optional timestamp for when the Identity PSK expires.
-	ExpiresAt string `json:"expiresAt,omitempty"`
+	// Timestamp for when the Identity PSK expires, or 'null' to never expire
+	// Format: date-time
+	ExpiresAt strfmt.DateTime `json:"expiresAt,omitempty"`
 
 	// The group policy to be applied to clients
 	GroupPolicyID string `json:"groupPolicyId,omitempty"`
@@ -130,6 +133,27 @@ type GetNetworkWirelessSsidIdentityPsksOKBodyItems0 struct {
 
 // Validate validates this get network wireless ssid identity psks o k body items0
 func (o *GetNetworkWirelessSsidIdentityPsksOKBodyItems0) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.validateExpiresAt(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *GetNetworkWirelessSsidIdentityPsksOKBodyItems0) validateExpiresAt(formats strfmt.Registry) error {
+	if swag.IsZero(o.ExpiresAt) { // not required
+		return nil
+	}
+
+	if err := validate.FormatOf("expiresAt", "body", "date-time", o.ExpiresAt.String(), formats); err != nil {
+		return err
+	}
+
 	return nil
 }
 

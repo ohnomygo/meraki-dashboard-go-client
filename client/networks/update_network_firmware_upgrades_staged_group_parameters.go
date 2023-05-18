@@ -61,10 +61,16 @@ UpdateNetworkFirmwareUpgradesStagedGroupParams contains all the parameters to se
 */
 type UpdateNetworkFirmwareUpgradesStagedGroupParams struct {
 
-	// GroupID.
+	/* GroupID.
+
+	   Group ID
+	*/
 	GroupID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkFirmwareUpgradesStagedGroup.

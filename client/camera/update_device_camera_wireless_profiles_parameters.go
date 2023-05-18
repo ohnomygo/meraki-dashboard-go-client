@@ -61,7 +61,10 @@ UpdateDeviceCameraWirelessProfilesParams contains all the parameters to send to 
 */
 type UpdateDeviceCameraWirelessProfilesParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceCameraWirelessProfiles.

@@ -61,10 +61,16 @@ GetNetworkWirelessSsidDeviceTypeGroupPoliciesParams contains all the parameters 
 */
 type GetNetworkWirelessSsidDeviceTypeGroupPoliciesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	timeout    time.Duration

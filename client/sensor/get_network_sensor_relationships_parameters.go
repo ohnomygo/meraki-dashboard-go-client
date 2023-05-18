@@ -61,7 +61,10 @@ GetNetworkSensorRelationshipsParams contains all the parameters to send to the A
 */
 type GetNetworkSensorRelationshipsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

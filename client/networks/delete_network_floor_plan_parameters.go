@@ -61,10 +61,16 @@ DeleteNetworkFloorPlanParams contains all the parameters to send to the API endp
 */
 type DeleteNetworkFloorPlanParams struct {
 
-	// FloorPlanID.
+	/* FloorPlanID.
+
+	   Floor plan ID
+	*/
 	FloorPlanID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

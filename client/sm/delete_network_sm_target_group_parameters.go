@@ -61,10 +61,16 @@ DeleteNetworkSmTargetGroupParams contains all the parameters to send to the API 
 */
 type DeleteNetworkSmTargetGroupParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// TargetGroupID.
+	/* TargetGroupID.
+
+	   Target group ID
+	*/
 	TargetGroupID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ CreateDeviceApplianceVmxAuthenticationTokenParams contains all the parameters to
 */
 type CreateDeviceApplianceVmxAuthenticationTokenParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

@@ -61,10 +61,16 @@ UpdateNetworkWirelessSsidParams contains all the parameters to send to the API e
 */
 type UpdateNetworkWirelessSsidParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	// UpdateNetworkWirelessSsid.

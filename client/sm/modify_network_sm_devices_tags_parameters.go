@@ -64,7 +64,10 @@ type ModifyNetworkSmDevicesTagsParams struct {
 	// ModifyNetworkSmDevicesTags.
 	ModifyNetworkSmDevicesTags ModifyNetworkSmDevicesTagsBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

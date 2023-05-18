@@ -61,7 +61,10 @@ UpdateDeviceSensorRelationshipsParams contains all the parameters to send to the
 */
 type UpdateDeviceSensorRelationshipsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceSensorRelationships.

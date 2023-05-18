@@ -61,7 +61,10 @@ GetNetworkWirelessBluetoothSettingsParams contains all the parameters to send to
 */
 type GetNetworkWirelessBluetoothSettingsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

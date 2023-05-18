@@ -61,7 +61,10 @@ UpdateNetworkCellularGatewayDhcpParams contains all the parameters to send to th
 */
 type UpdateNetworkCellularGatewayDhcpParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkCellularGatewayDhcp.

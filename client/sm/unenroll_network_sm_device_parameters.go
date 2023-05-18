@@ -61,10 +61,16 @@ UnenrollNetworkSmDeviceParams contains all the parameters to send to the API end
 */
 type UnenrollNetworkSmDeviceParams struct {
 
-	// DeviceID.
+	/* DeviceID.
+
+	   Device ID
+	*/
 	DeviceID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

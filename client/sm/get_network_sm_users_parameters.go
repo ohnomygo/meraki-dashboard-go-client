@@ -74,7 +74,10 @@ type GetNetworkSmUsersParams struct {
 	*/
 	Ids []string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* Scope.

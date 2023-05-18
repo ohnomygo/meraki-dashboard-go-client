@@ -61,10 +61,16 @@ GetNetworkSmBypassActivationLockAttemptParams contains all the parameters to sen
 */
 type GetNetworkSmBypassActivationLockAttemptParams struct {
 
-	// AttemptID.
+	/* AttemptID.
+
+	   Attempt ID
+	*/
 	AttemptID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

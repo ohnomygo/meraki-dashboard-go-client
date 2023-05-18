@@ -64,7 +64,10 @@ type CreateOrganizationAdaptivePolicyACLParams struct {
 	// CreateOrganizationAdaptivePolicyACL.
 	CreateOrganizationAdaptivePolicyACL CreateOrganizationAdaptivePolicyACLBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

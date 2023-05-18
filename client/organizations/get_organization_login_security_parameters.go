@@ -61,7 +61,10 @@ GetOrganizationLoginSecurityParams contains all the parameters to send to the AP
 */
 type GetOrganizationLoginSecurityParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ GetDeviceCameraAnalyticsZonesParams contains all the parameters to send to the A
 */
 type GetDeviceCameraAnalyticsZonesParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

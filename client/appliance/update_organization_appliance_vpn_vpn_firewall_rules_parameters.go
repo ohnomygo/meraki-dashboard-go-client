@@ -61,7 +61,10 @@ UpdateOrganizationApplianceVpnVpnFirewallRulesParams contains all the parameters
 */
 type UpdateOrganizationApplianceVpnVpnFirewallRulesParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationApplianceVpnVpnFirewallRules.

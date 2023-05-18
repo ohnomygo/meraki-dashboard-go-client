@@ -64,7 +64,10 @@ type CreateNetworkPiiRequestParams struct {
 	// CreateNetworkPiiRequest.
 	CreateNetworkPiiRequest CreateNetworkPiiRequestBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

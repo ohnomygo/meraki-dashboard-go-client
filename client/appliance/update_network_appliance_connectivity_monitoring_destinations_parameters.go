@@ -61,7 +61,10 @@ UpdateNetworkApplianceConnectivityMonitoringDestinationsParams contains all the 
 */
 type UpdateNetworkApplianceConnectivityMonitoringDestinationsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceConnectivityMonitoringDestinations.

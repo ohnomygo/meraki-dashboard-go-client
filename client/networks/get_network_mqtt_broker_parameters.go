@@ -61,10 +61,16 @@ GetNetworkMqttBrokerParams contains all the parameters to send to the API endpoi
 */
 type GetNetworkMqttBrokerParams struct {
 
-	// MqttBrokerID.
+	/* MqttBrokerID.
+
+	   Mqtt broker ID
+	*/
 	MqttBrokerID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

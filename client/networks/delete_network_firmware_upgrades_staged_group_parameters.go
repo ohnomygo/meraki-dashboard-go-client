@@ -61,10 +61,16 @@ DeleteNetworkFirmwareUpgradesStagedGroupParams contains all the parameters to se
 */
 type DeleteNetworkFirmwareUpgradesStagedGroupParams struct {
 
-	// GroupID.
+	/* GroupID.
+
+	   Group ID
+	*/
 	GroupID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

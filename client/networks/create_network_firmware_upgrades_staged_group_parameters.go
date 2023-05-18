@@ -64,7 +64,10 @@ type CreateNetworkFirmwareUpgradesStagedGroupParams struct {
 	// CreateNetworkFirmwareUpgradesStagedGroup.
 	CreateNetworkFirmwareUpgradesStagedGroup CreateNetworkFirmwareUpgradesStagedGroupBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

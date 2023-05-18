@@ -61,10 +61,16 @@ RefreshNetworkSmDeviceDetailsParams contains all the parameters to send to the A
 */
 type RefreshNetworkSmDeviceDetailsParams struct {
 
-	// DeviceID.
+	/* DeviceID.
+
+	   Device ID
+	*/
 	DeviceID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

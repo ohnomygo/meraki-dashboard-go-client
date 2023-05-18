@@ -64,7 +64,10 @@ type ClaimNetworkDevicesParams struct {
 	// ClaimNetworkDevices.
 	ClaimNetworkDevices ClaimNetworkDevicesBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

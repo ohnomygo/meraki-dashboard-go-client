@@ -61,7 +61,10 @@ UpdateNetworkApplianceFirewallL7FirewallRulesParams contains all the parameters 
 */
 type UpdateNetworkApplianceFirewallL7FirewallRulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceFirewallL7FirewallRules.

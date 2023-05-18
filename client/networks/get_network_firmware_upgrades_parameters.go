@@ -61,7 +61,10 @@ GetNetworkFirmwareUpgradesParams contains all the parameters to send to the API 
 */
 type GetNetworkFirmwareUpgradesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

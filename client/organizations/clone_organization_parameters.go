@@ -64,7 +64,10 @@ type CloneOrganizationParams struct {
 	// CloneOrganization.
 	CloneOrganization CloneOrganizationBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

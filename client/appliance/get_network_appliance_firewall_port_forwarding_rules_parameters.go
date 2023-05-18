@@ -61,7 +61,10 @@ GetNetworkApplianceFirewallPortForwardingRulesParams contains all the parameters
 */
 type GetNetworkApplianceFirewallPortForwardingRulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

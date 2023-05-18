@@ -61,10 +61,16 @@ GetOrganizationInsightMonitoredMediaServerParams contains all the parameters to 
 */
 type GetOrganizationInsightMonitoredMediaServerParams struct {
 
-	// MonitoredMediaServerID.
+	/* MonitoredMediaServerID.
+
+	   Monitored media server ID
+	*/
 	MonitoredMediaServerID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

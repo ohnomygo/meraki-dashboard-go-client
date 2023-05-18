@@ -74,7 +74,10 @@ type GetOrganizationClientsSearchParams struct {
 	*/
 	Mac string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* PerPage.

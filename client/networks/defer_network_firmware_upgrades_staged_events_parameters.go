@@ -61,7 +61,10 @@ DeferNetworkFirmwareUpgradesStagedEventsParams contains all the parameters to se
 */
 type DeferNetworkFirmwareUpgradesStagedEventsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

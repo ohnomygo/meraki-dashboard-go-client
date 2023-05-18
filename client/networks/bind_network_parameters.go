@@ -64,7 +64,10 @@ type BindNetworkParams struct {
 	// BindNetwork.
 	BindNetwork BindNetworkBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

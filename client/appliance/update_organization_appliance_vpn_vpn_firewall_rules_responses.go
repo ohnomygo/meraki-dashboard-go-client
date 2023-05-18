@@ -49,7 +49,7 @@ UpdateOrganizationApplianceVpnVpnFirewallRulesOK describes a response with statu
 Successful operation
 */
 type UpdateOrganizationApplianceVpnVpnFirewallRulesOK struct {
-	Payload interface{}
+	Payload *UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody
 }
 
 // IsSuccess returns true when this update organization appliance vpn vpn firewall rules o k response has a 2xx status code
@@ -90,14 +90,16 @@ func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOK) String() string {
 	return fmt.Sprintf("[PUT /organizations/{organizationId}/appliance/vpn/vpnFirewallRules][%d] updateOrganizationApplianceVpnVpnFirewallRulesOK  %+v", 200, o.Payload)
 }
 
-func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOK) GetPayload() interface{} {
+func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOK) GetPayload() *UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody {
 	return o.Payload
 }
 
 func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
+	o.Payload = new(UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody)
+
 	// response payload
-	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 
@@ -106,7 +108,7 @@ func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOK) readResponse(response
 
 /*
 UpdateOrganizationApplianceVpnVpnFirewallRulesBody update organization appliance vpn vpn firewall rules body
-// Example: {"rules":[{"comment":"Allow TCP traffic to subnet with HTTP servers.","destCidr":"192.168.1.0/24","destPort":"443","policy":"allow","protocol":"tcp","srcCidr":"Any","srcPort":"Any","syslogEnabled":false}]}
+// Example: {"rules":[{"comment":"Allow TCP traffic to subnet with HTTP servers.","destCidr":"192.168.1.0/24","destPort":"443","policy":"allow","protocol":"tcp","srcCidr":"Any","srcPort":"Any","syslogEnabled":false}],"syslogDefaultRule":false}
 swagger:model UpdateOrganizationApplianceVpnVpnFirewallRulesBody
 */
 type UpdateOrganizationApplianceVpnVpnFirewallRulesBody struct {
@@ -203,6 +205,167 @@ func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesBody) MarshalBinary() ([]
 // UnmarshalBinary interface implementation
 func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesBody) UnmarshalBinary(b []byte) error {
 	var res UpdateOrganizationApplianceVpnVpnFirewallRulesBody
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
+	return nil
+}
+
+/*
+UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody update organization appliance vpn vpn firewall rules o k body
+swagger:model UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody
+*/
+type UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody struct {
+
+	// List of firewall rules
+	Rules []*UpdateOrganizationApplianceVpnVpnFirewallRulesOKBodyRulesItems0 `json:"rules"`
+}
+
+// Validate validates this update organization appliance vpn vpn firewall rules o k body
+func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.validateRules(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody) validateRules(formats strfmt.Registry) error {
+	if swag.IsZero(o.Rules) { // not required
+		return nil
+	}
+
+	for i := 0; i < len(o.Rules); i++ {
+		if swag.IsZero(o.Rules[i]) { // not required
+			continue
+		}
+
+		if o.Rules[i] != nil {
+			if err := o.Rules[i].Validate(formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("updateOrganizationApplianceVpnVpnFirewallRulesOK" + "." + "rules" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("updateOrganizationApplianceVpnVpnFirewallRulesOK" + "." + "rules" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
+// ContextValidate validate this update organization appliance vpn vpn firewall rules o k body based on the context it is used
+func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.contextValidateRules(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody) contextValidateRules(ctx context.Context, formats strfmt.Registry) error {
+
+	for i := 0; i < len(o.Rules); i++ {
+
+		if o.Rules[i] != nil {
+			if err := o.Rules[i].ContextValidate(ctx, formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("updateOrganizationApplianceVpnVpnFirewallRulesOK" + "." + "rules" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("updateOrganizationApplianceVpnVpnFirewallRulesOK" + "." + "rules" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody) UnmarshalBinary(b []byte) error {
+	var res UpdateOrganizationApplianceVpnVpnFirewallRulesOKBody
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
+	return nil
+}
+
+/*
+UpdateOrganizationApplianceVpnVpnFirewallRulesOKBodyRulesItems0 update organization appliance vpn vpn firewall rules o k body rules items0
+swagger:model UpdateOrganizationApplianceVpnVpnFirewallRulesOKBodyRulesItems0
+*/
+type UpdateOrganizationApplianceVpnVpnFirewallRulesOKBodyRulesItems0 struct {
+
+	// Description of the rule
+	Comment string `json:"comment,omitempty"`
+
+	// List of destination IP addresses
+	DestCidr string `json:"destCidr,omitempty"`
+
+	// List of destination ports
+	DestPort string `json:"destPort,omitempty"`
+
+	// 'Deny' traffic specified by this rule
+	Policy string `json:"policy,omitempty"`
+
+	// The type of protocol
+	Protocol string `json:"protocol,omitempty"`
+
+	// List of source IP addresses
+	SrcCidr string `json:"srcCidr,omitempty"`
+
+	// List of source ports
+	SrcPort string `json:"srcPort,omitempty"`
+
+	// Flag indicating whether the rule should be logged to syslog
+	SyslogEnabled bool `json:"syslogEnabled,omitempty"`
+}
+
+// Validate validates this update organization appliance vpn vpn firewall rules o k body rules items0
+func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOKBodyRulesItems0) Validate(formats strfmt.Registry) error {
+	return nil
+}
+
+// ContextValidate validates this update organization appliance vpn vpn firewall rules o k body rules items0 based on context it is used
+func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOKBodyRulesItems0) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOKBodyRulesItems0) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *UpdateOrganizationApplianceVpnVpnFirewallRulesOKBodyRulesItems0) UnmarshalBinary(b []byte) error {
+	var res UpdateOrganizationApplianceVpnVpnFirewallRulesOKBodyRulesItems0
 	if err := swag.ReadJSON(b, &res); err != nil {
 		return err
 	}

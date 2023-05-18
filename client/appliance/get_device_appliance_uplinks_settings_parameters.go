@@ -61,7 +61,10 @@ GetDeviceApplianceUplinksSettingsParams contains all the parameters to send to t
 */
 type GetDeviceApplianceUplinksSettingsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

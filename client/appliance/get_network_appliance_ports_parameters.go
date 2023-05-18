@@ -61,7 +61,10 @@ GetNetworkAppliancePortsParams contains all the parameters to send to the API en
 */
 type GetNetworkAppliancePortsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

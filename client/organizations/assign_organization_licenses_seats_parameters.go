@@ -64,7 +64,10 @@ type AssignOrganizationLicensesSeatsParams struct {
 	// AssignOrganizationLicensesSeats.
 	AssignOrganizationLicensesSeats AssignOrganizationLicensesSeatsBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

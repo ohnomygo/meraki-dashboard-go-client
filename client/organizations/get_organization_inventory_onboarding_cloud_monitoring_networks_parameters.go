@@ -74,7 +74,10 @@ type GetOrganizationInventoryOnboardingCloudMonitoringNetworksParams struct {
 	*/
 	EndingBefore *string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* PerPage.

@@ -61,7 +61,10 @@ UpdateOrganizationBrandingPoliciesPrioritiesParams contains all the parameters t
 */
 type UpdateOrganizationBrandingPoliciesPrioritiesParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationBrandingPoliciesPriorities.

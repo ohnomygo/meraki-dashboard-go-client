@@ -64,7 +64,10 @@ type MoveOrganizationLicensesSeatsParams struct {
 	// MoveOrganizationLicensesSeats.
 	MoveOrganizationLicensesSeats MoveOrganizationLicensesSeatsBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

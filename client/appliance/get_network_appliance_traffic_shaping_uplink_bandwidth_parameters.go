@@ -61,7 +61,10 @@ GetNetworkApplianceTrafficShapingUplinkBandwidthParams contains all the paramete
 */
 type GetNetworkApplianceTrafficShapingUplinkBandwidthParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

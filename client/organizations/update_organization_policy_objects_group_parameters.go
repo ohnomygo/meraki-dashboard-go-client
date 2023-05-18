@@ -61,10 +61,16 @@ UpdateOrganizationPolicyObjectsGroupParams contains all the parameters to send t
 */
 type UpdateOrganizationPolicyObjectsGroupParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
-	// PolicyObjectGroupID.
+	/* PolicyObjectGroupID.
+
+	   Policy object group ID
+	*/
 	PolicyObjectGroupID string
 
 	// UpdateOrganizationPolicyObjectsGroup.

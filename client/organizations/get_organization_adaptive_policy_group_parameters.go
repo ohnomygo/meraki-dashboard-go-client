@@ -61,10 +61,16 @@ GetOrganizationAdaptivePolicyGroupParams contains all the parameters to send to 
 */
 type GetOrganizationAdaptivePolicyGroupParams struct {
 
-	// ID.
+	/* ID.
+
+	   Id
+	*/
 	ID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

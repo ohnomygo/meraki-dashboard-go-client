@@ -61,7 +61,10 @@ GetNetworkApplianceFirewallFirewalledServicesParams contains all the parameters 
 */
 type GetNetworkApplianceFirewallFirewalledServicesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

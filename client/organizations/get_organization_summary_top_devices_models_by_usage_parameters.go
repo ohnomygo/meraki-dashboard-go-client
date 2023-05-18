@@ -62,7 +62,10 @@ GetOrganizationSummaryTopDevicesModelsByUsageParams contains all the parameters 
 */
 type GetOrganizationSummaryTopDevicesModelsByUsageParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* T0.

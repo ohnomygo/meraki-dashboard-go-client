@@ -61,7 +61,10 @@ UpdateNetworkApplianceFirewallOneToManyNatRulesParams contains all the parameter
 */
 type UpdateNetworkApplianceFirewallOneToManyNatRulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceFirewallOneToManyNatRules.

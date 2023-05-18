@@ -61,7 +61,10 @@ GetOrganizationOpenapiSpecParams contains all the parameters to send to the API 
 */
 type GetOrganizationOpenapiSpecParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

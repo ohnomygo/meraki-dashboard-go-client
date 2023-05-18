@@ -120,6 +120,9 @@ type GetNetworkWebhooksPayloadTemplatesOKBodyItems0 struct {
 	// Webhook payload template Id
 	PayloadTemplateID string `json:"payloadTemplateId,omitempty"`
 
+	// sharing
+	Sharing *GetNetworkWebhooksPayloadTemplatesOKBodyItems0Sharing `json:"sharing,omitempty"`
+
 	// The type of the payload template
 	Type string `json:"type,omitempty"`
 }
@@ -129,6 +132,10 @@ func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0) Validate(formats strfmt
 	var res []error
 
 	if err := o.validateHeaders(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := o.validateSharing(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -164,11 +171,34 @@ func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0) validateHeaders(formats
 	return nil
 }
 
+func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0) validateSharing(formats strfmt.Registry) error {
+	if swag.IsZero(o.Sharing) { // not required
+		return nil
+	}
+
+	if o.Sharing != nil {
+		if err := o.Sharing.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("sharing")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("sharing")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
 // ContextValidate validate this get network webhooks payload templates o k body items0 based on the context it is used
 func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
 	if err := o.contextValidateHeaders(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := o.contextValidateSharing(ctx, formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -193,6 +223,22 @@ func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0) contextValidateHeaders(
 			}
 		}
 
+	}
+
+	return nil
+}
+
+func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0) contextValidateSharing(ctx context.Context, formats strfmt.Registry) error {
+
+	if o.Sharing != nil {
+		if err := o.Sharing.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("sharing")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("sharing")
+			}
+			return err
+		}
 	}
 
 	return nil
@@ -250,6 +296,135 @@ func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0HeadersItems0) MarshalBin
 // UnmarshalBinary interface implementation
 func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0HeadersItems0) UnmarshalBinary(b []byte) error {
 	var res GetNetworkWebhooksPayloadTemplatesOKBodyItems0HeadersItems0
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
+	return nil
+}
+
+/*
+GetNetworkWebhooksPayloadTemplatesOKBodyItems0Sharing Information on which entities have access to the template
+swagger:model GetNetworkWebhooksPayloadTemplatesOKBodyItems0Sharing
+*/
+type GetNetworkWebhooksPayloadTemplatesOKBodyItems0Sharing struct {
+
+	// by network
+	ByNetwork *GetNetworkWebhooksPayloadTemplatesOKBodyItems0SharingByNetwork `json:"byNetwork,omitempty"`
+}
+
+// Validate validates this get network webhooks payload templates o k body items0 sharing
+func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0Sharing) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.validateByNetwork(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0Sharing) validateByNetwork(formats strfmt.Registry) error {
+	if swag.IsZero(o.ByNetwork) { // not required
+		return nil
+	}
+
+	if o.ByNetwork != nil {
+		if err := o.ByNetwork.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("sharing" + "." + "byNetwork")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("sharing" + "." + "byNetwork")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
+// ContextValidate validate this get network webhooks payload templates o k body items0 sharing based on the context it is used
+func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0Sharing) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.contextValidateByNetwork(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0Sharing) contextValidateByNetwork(ctx context.Context, formats strfmt.Registry) error {
+
+	if o.ByNetwork != nil {
+		if err := o.ByNetwork.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("sharing" + "." + "byNetwork")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("sharing" + "." + "byNetwork")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0Sharing) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0Sharing) UnmarshalBinary(b []byte) error {
+	var res GetNetworkWebhooksPayloadTemplatesOKBodyItems0Sharing
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
+	return nil
+}
+
+/*
+GetNetworkWebhooksPayloadTemplatesOKBodyItems0SharingByNetwork Information on network access to the template
+swagger:model GetNetworkWebhooksPayloadTemplatesOKBodyItems0SharingByNetwork
+*/
+type GetNetworkWebhooksPayloadTemplatesOKBodyItems0SharingByNetwork struct {
+
+	// Indicates whether network admins may modify this template
+	AdminsCanModify bool `json:"adminsCanModify,omitempty"`
+}
+
+// Validate validates this get network webhooks payload templates o k body items0 sharing by network
+func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0SharingByNetwork) Validate(formats strfmt.Registry) error {
+	return nil
+}
+
+// ContextValidate validates this get network webhooks payload templates o k body items0 sharing by network based on context it is used
+func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0SharingByNetwork) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0SharingByNetwork) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *GetNetworkWebhooksPayloadTemplatesOKBodyItems0SharingByNetwork) UnmarshalBinary(b []byte) error {
+	var res GetNetworkWebhooksPayloadTemplatesOKBodyItems0SharingByNetwork
 	if err := swag.ReadJSON(b, &res); err != nil {
 		return err
 	}

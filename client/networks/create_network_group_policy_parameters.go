@@ -64,7 +64,10 @@ type CreateNetworkGroupPolicyParams struct {
 	// CreateNetworkGroupPolicy.
 	CreateNetworkGroupPolicy CreateNetworkGroupPolicyBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

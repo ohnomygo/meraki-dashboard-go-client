@@ -62,7 +62,10 @@ GetNetworkSmTargetGroupsParams contains all the parameters to send to the API en
 */
 type GetNetworkSmTargetGroupsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* WithDetails.

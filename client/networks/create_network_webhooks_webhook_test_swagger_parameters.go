@@ -64,7 +64,10 @@ type CreateNetworkWebhooksWebhookTestParams struct {
 	// CreateNetworkWebhooksWebhookTest.
 	CreateNetworkWebhooksWebhookTest CreateNetworkWebhooksWebhookTestBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ UpdateDeviceCameraCustomAnalyticsParams contains all the parameters to send to t
 */
 type UpdateDeviceCameraCustomAnalyticsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceCameraCustomAnalytics.

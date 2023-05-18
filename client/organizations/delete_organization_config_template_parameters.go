@@ -61,10 +61,16 @@ DeleteOrganizationConfigTemplateParams contains all the parameters to send to th
 */
 type DeleteOrganizationConfigTemplateParams struct {
 
-	// ConfigTemplateID.
+	/* ConfigTemplateID.
+
+	   Config template ID
+	*/
 	ConfigTemplateID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

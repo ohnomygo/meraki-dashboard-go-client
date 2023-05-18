@@ -61,7 +61,10 @@ RebootDeviceParams contains all the parameters to send to the API endpoint
 */
 type RebootDeviceParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

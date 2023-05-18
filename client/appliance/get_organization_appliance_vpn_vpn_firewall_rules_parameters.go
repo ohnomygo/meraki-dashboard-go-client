@@ -61,7 +61,10 @@ GetOrganizationApplianceVpnVpnFirewallRulesParams contains all the parameters to
 */
 type GetOrganizationApplianceVpnVpnFirewallRulesParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ UpdateDeviceApplianceUplinksSettingsParams contains all the parameters to send t
 */
 type UpdateDeviceApplianceUplinksSettingsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceApplianceUplinksSettings.

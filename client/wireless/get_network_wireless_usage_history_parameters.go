@@ -92,7 +92,10 @@ type GetNetworkWirelessUsageHistoryParams struct {
 	*/
 	DeviceSerial *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* Resolution.

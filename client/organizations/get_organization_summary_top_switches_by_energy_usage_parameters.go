@@ -62,7 +62,10 @@ GetOrganizationSummaryTopSwitchesByEnergyUsageParams contains all the parameters
 */
 type GetOrganizationSummaryTopSwitchesByEnergyUsageParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* T0.

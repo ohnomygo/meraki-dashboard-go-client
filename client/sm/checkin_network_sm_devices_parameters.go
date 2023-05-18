@@ -64,7 +64,10 @@ type CheckinNetworkSmDevicesParams struct {
 	// CheckinNetworkSmDevices.
 	CheckinNetworkSmDevices CheckinNetworkSmDevicesBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

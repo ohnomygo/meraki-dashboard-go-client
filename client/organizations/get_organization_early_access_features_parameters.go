@@ -61,7 +61,10 @@ GetOrganizationEarlyAccessFeaturesParams contains all the parameters to send to 
 */
 type GetOrganizationEarlyAccessFeaturesParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

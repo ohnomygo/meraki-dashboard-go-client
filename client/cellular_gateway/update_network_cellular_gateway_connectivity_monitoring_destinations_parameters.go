@@ -61,7 +61,10 @@ UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsParams contains al
 */
 type UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkCellularGatewayConnectivityMonitoringDestinations.

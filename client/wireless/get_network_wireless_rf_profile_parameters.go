@@ -61,10 +61,16 @@ GetNetworkWirelessRfProfileParams contains all the parameters to send to the API
 */
 type GetNetworkWirelessRfProfileParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// RfProfileID.
+	/* RfProfileID.
+
+	   Rf profile ID
+	*/
 	RfProfileID string
 
 	timeout    time.Duration

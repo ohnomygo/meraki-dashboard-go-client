@@ -61,10 +61,16 @@ UpdateNetworkWirelessRfProfileParams contains all the parameters to send to the 
 */
 type UpdateNetworkWirelessRfProfileParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// RfProfileID.
+	/* RfProfileID.
+
+	   Rf profile ID
+	*/
 	RfProfileID string
 
 	// UpdateNetworkWirelessRfProfile.

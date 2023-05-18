@@ -61,10 +61,16 @@ GetOrganizationInventoryDeviceParams contains all the parameters to send to the 
 */
 type GetOrganizationInventoryDeviceParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

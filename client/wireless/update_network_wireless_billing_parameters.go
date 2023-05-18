@@ -61,7 +61,10 @@ UpdateNetworkWirelessBillingParams contains all the parameters to send to the AP
 */
 type UpdateNetworkWirelessBillingParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkWirelessBilling.

@@ -61,10 +61,16 @@ GetOrganizationAdaptivePolicyACLParams contains all the parameters to send to th
 */
 type GetOrganizationAdaptivePolicyACLParams struct {
 
-	// ACLID.
+	/* ACLID.
+
+	   Acl ID
+	*/
 	ACLID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

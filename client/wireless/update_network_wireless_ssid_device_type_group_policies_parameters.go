@@ -61,10 +61,16 @@ UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesParams contains all the paramete
 */
 type UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	// UpdateNetworkWirelessSsidDeviceTypeGroupPolicies.

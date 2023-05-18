@@ -61,10 +61,16 @@ UpdateNetworkSensorAlertsProfileParams contains all the parameters to send to th
 */
 type UpdateNetworkSensorAlertsProfileParams struct {
 
-	// ID.
+	/* ID.
+
+	   Id
+	*/
 	ID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkSensorAlertsProfile.

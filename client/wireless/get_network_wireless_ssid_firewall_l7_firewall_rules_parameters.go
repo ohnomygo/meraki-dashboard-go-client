@@ -61,10 +61,16 @@ GetNetworkWirelessSsidFirewallL7FirewallRulesParams contains all the parameters 
 */
 type GetNetworkWirelessSsidFirewallL7FirewallRulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	timeout    time.Duration

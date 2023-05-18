@@ -61,10 +61,16 @@ DeleteOrganizationAdaptivePolicyGroupParams contains all the parameters to send 
 */
 type DeleteOrganizationAdaptivePolicyGroupParams struct {
 
-	// ID.
+	/* ID.
+
+	   Id
+	*/
 	ID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

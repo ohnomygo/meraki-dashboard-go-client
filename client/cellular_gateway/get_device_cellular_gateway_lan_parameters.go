@@ -61,7 +61,10 @@ GetDeviceCellularGatewayLanParams contains all the parameters to send to the API
 */
 type GetDeviceCellularGatewayLanParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

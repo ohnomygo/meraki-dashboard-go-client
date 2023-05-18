@@ -61,10 +61,16 @@ UpdateNetworkMqttBrokerParams contains all the parameters to send to the API end
 */
 type UpdateNetworkMqttBrokerParams struct {
 
-	// MqttBrokerID.
+	/* MqttBrokerID.
+
+	   Mqtt broker ID
+	*/
 	MqttBrokerID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkMqttBroker.

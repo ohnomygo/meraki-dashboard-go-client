@@ -61,10 +61,16 @@ GetNetworkWirelessSsidTrafficShapingRulesParams contains all the parameters to s
 */
 type GetNetworkWirelessSsidTrafficShapingRulesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// Number.
+	/* Number.
+
+	   Number
+	*/
 	Number string
 
 	timeout    time.Duration

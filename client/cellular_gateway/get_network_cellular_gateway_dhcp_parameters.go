@@ -61,7 +61,10 @@ GetNetworkCellularGatewayDhcpParams contains all the parameters to send to the A
 */
 type GetNetworkCellularGatewayDhcpParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

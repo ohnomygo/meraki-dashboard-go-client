@@ -61,7 +61,10 @@ GetOrganizationAdminsParams contains all the parameters to send to the API endpo
 */
 type GetOrganizationAdminsParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

@@ -61,10 +61,16 @@ GetNetworkMerakiAuthUserParams contains all the parameters to send to the API en
 */
 type GetNetworkMerakiAuthUserParams struct {
 
-	// MerakiAuthUserID.
+	/* MerakiAuthUserID.
+
+	   Meraki auth user ID
+	*/
 	MerakiAuthUserID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -80,7 +80,10 @@ type GetDeviceWirelessLatencyStatsParams struct {
 	*/
 	Fields *string
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	/* Ssid.

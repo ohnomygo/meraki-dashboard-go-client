@@ -61,10 +61,16 @@ DeleteNetworkGroupPolicyParams contains all the parameters to send to the API en
 */
 type DeleteNetworkGroupPolicyParams struct {
 
-	// GroupPolicyID.
+	/* GroupPolicyID.
+
+	   Group policy ID
+	*/
 	GroupPolicyID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

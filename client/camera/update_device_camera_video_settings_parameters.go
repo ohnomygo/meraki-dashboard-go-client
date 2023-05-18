@@ -61,7 +61,10 @@ UpdateDeviceCameraVideoSettingsParams contains all the parameters to send to the
 */
 type UpdateDeviceCameraVideoSettingsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceCameraVideoSettings.

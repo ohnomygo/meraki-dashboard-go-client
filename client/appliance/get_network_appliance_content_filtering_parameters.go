@@ -61,7 +61,10 @@ GetNetworkApplianceContentFilteringParams contains all the parameters to send to
 */
 type GetNetworkApplianceContentFilteringParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ GetNetworkTrafficShapingApplicationCategoriesParams contains all the parameters 
 */
 type GetNetworkTrafficShapingApplicationCategoriesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

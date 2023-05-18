@@ -61,7 +61,10 @@ GetNetworkDevicesParams contains all the parameters to send to the API endpoint
 */
 type GetNetworkDevicesParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -64,7 +64,10 @@ type CreateNetworkWebhooksHTTPServerParams struct {
 	// CreateNetworkWebhooksHTTPServer.
 	CreateNetworkWebhooksHTTPServer CreateNetworkWebhooksHTTPServerBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

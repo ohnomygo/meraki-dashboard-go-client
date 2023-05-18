@@ -61,7 +61,10 @@ GetNetworkApplianceVpnBgpParams contains all the parameters to send to the API e
 */
 type GetNetworkApplianceVpnBgpParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

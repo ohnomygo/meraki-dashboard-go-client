@@ -62,7 +62,10 @@ GetOrganizationAPIRequestsOverviewParams contains all the parameters to send to 
 */
 type GetOrganizationAPIRequestsOverviewParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* T0.

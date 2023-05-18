@@ -61,7 +61,10 @@ GetNetworkWirelessAlternateManagementInterfaceParams contains all the parameters
 */
 type GetNetworkWirelessAlternateManagementInterfaceParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

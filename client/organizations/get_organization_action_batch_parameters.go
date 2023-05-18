@@ -61,10 +61,16 @@ GetOrganizationActionBatchParams contains all the parameters to send to the API 
 */
 type GetOrganizationActionBatchParams struct {
 
-	// ActionBatchID.
+	/* ActionBatchID.
+
+	   Action batch ID
+	*/
 	ActionBatchID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

@@ -61,10 +61,16 @@ DeleteOrganizationAdminParams contains all the parameters to send to the API end
 */
 type DeleteOrganizationAdminParams struct {
 
-	// AdminID.
+	/* AdminID.
+
+	   Admin ID
+	*/
 	AdminID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

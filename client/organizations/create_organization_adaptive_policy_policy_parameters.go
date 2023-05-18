@@ -64,7 +64,10 @@ type CreateOrganizationAdaptivePolicyPolicyParams struct {
 	// CreateOrganizationAdaptivePolicyPolicy.
 	CreateOrganizationAdaptivePolicyPolicy CreateOrganizationAdaptivePolicyPolicyBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

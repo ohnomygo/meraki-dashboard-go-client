@@ -61,10 +61,16 @@ UpdateOrganizationEarlyAccessFeaturesOptInParams contains all the parameters to 
 */
 type UpdateOrganizationEarlyAccessFeaturesOptInParams struct {
 
-	// OptInID.
+	/* OptInID.
+
+	   Opt in ID
+	*/
 	OptInID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationEarlyAccessFeaturesOptIn.

@@ -61,10 +61,16 @@ GetNetworkWebhooksHTTPServerParams contains all the parameters to send to the AP
 */
 type GetNetworkWebhooksHTTPServerParams struct {
 
-	// HTTPServerID.
+	/* HTTPServerID.
+
+	   Http server ID
+	*/
 	HTTPServerID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -80,7 +80,10 @@ type GetOrganizationAPIRequestsOverviewResponseCodesByIntervalParams struct {
 	*/
 	OperationIds []string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* SourceIps.

@@ -64,7 +64,10 @@ type CreateOrganizationConfigTemplateParams struct {
 	// CreateOrganizationConfigTemplate.
 	CreateOrganizationConfigTemplate CreateOrganizationConfigTemplateBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

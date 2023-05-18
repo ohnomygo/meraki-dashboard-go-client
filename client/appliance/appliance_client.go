@@ -2157,9 +2157,9 @@ func (a *Client) GetNetworkApplianceTrafficShapingRules(params *GetNetworkApplia
 }
 
 /*
-GetNetworkApplianceTrafficShapingUplinkBandwidth returns the uplink bandwidth settings for your m x network
+GetNetworkApplianceTrafficShapingUplinkBandwidth returns the uplink bandwidth limits for your m x network
 
-Returns the uplink bandwidth settings for your MX network.
+Returns the uplink bandwidth limits for your MX network. This may not reflect the affected device's hardware capabilities.  For more information on your device's hardware capabilities, please consult our MX Family Datasheet - [https://meraki.cisco.com/product-collateral/mx-family-datasheet/?file]
 */
 func (a *Client) GetNetworkApplianceTrafficShapingUplinkBandwidth(params *GetNetworkApplianceTrafficShapingUplinkBandwidthParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetNetworkApplianceTrafficShapingUplinkBandwidthOK, error) {
 	// TODO: Validate the params before sending

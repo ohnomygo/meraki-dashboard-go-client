@@ -49,7 +49,7 @@ CreateOrganizationAdaptivePolicyACLOK describes a response with status code 200,
 Successful operation
 */
 type CreateOrganizationAdaptivePolicyACLOK struct {
-	Payload interface{}
+	Payload *CreateOrganizationAdaptivePolicyACLOKBody
 }
 
 // IsSuccess returns true when this create organization adaptive policy Acl o k response has a 2xx status code
@@ -90,14 +90,16 @@ func (o *CreateOrganizationAdaptivePolicyACLOK) String() string {
 	return fmt.Sprintf("[POST /organizations/{organizationId}/adaptivePolicy/acls][%d] createOrganizationAdaptivePolicyAclOK  %+v", 200, o.Payload)
 }
 
-func (o *CreateOrganizationAdaptivePolicyACLOK) GetPayload() interface{} {
+func (o *CreateOrganizationAdaptivePolicyACLOK) GetPayload() *CreateOrganizationAdaptivePolicyACLOKBody {
 	return o.Payload
 }
 
 func (o *CreateOrganizationAdaptivePolicyACLOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
+	o.Payload = new(CreateOrganizationAdaptivePolicyACLOKBody)
+
 	// response payload
-	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 
@@ -106,7 +108,7 @@ func (o *CreateOrganizationAdaptivePolicyACLOK) readResponse(response runtime.Cl
 
 /*
 CreateOrganizationAdaptivePolicyACLBody create organization adaptive policy ACL body
-// Example: {"description":"Blocks sensitive web traffic","ipVersion":"ipv6","name":"Block sensitive web traffic","rules":[{"dstPort":"22-30","policy":"deny","protocol":"tcp","srcPort":"1,33"},{"dstPort":"any","policy":"allow","protocol":"any","srcPort":"any"}]}
+// Example: {"description":"Blocks sensitive web traffic","ipVersion":"ipv6","name":"Block sensitive web traffic","rules":[{"dstPort":"22-30","policy":"deny","protocol":"tcp","srcPort":"1,33"}]}
 swagger:model CreateOrganizationAdaptivePolicyACLBody
 */
 type CreateOrganizationAdaptivePolicyACLBody struct {
@@ -277,6 +279,207 @@ func (o *CreateOrganizationAdaptivePolicyACLBody) MarshalBinary() ([]byte, error
 // UnmarshalBinary interface implementation
 func (o *CreateOrganizationAdaptivePolicyACLBody) UnmarshalBinary(b []byte) error {
 	var res CreateOrganizationAdaptivePolicyACLBody
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
+	return nil
+}
+
+/*
+CreateOrganizationAdaptivePolicyACLOKBody create organization adaptive policy ACL o k body
+swagger:model CreateOrganizationAdaptivePolicyACLOKBody
+*/
+type CreateOrganizationAdaptivePolicyACLOKBody struct {
+
+	// ID of the adaptive policy ACL
+	ACLID string `json:"aclId,omitempty"`
+
+	// When the adaptive policy ACL was created
+	// Format: date-time
+	CreatedAt strfmt.DateTime `json:"createdAt,omitempty"`
+
+	// Description of the adaptive policy ACL
+	Description string `json:"description,omitempty"`
+
+	// IP version of adpative policy ACL
+	IPVersion string `json:"ipVersion,omitempty"`
+
+	// Name of the adaptive policy ACL
+	Name string `json:"name,omitempty"`
+
+	// An ordered array of the adaptive policy ACL rules
+	Rules []*CreateOrganizationAdaptivePolicyACLOKBodyRulesItems0 `json:"rules"`
+
+	// When the adaptive policy ACL was last updated
+	// Format: date-time
+	UpdatedAt strfmt.DateTime `json:"updatedAt,omitempty"`
+}
+
+// Validate validates this create organization adaptive policy ACL o k body
+func (o *CreateOrganizationAdaptivePolicyACLOKBody) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.validateCreatedAt(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := o.validateRules(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := o.validateUpdatedAt(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *CreateOrganizationAdaptivePolicyACLOKBody) validateCreatedAt(formats strfmt.Registry) error {
+	if swag.IsZero(o.CreatedAt) { // not required
+		return nil
+	}
+
+	if err := validate.FormatOf("createOrganizationAdaptivePolicyAclOK"+"."+"createdAt", "body", "date-time", o.CreatedAt.String(), formats); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (o *CreateOrganizationAdaptivePolicyACLOKBody) validateRules(formats strfmt.Registry) error {
+	if swag.IsZero(o.Rules) { // not required
+		return nil
+	}
+
+	for i := 0; i < len(o.Rules); i++ {
+		if swag.IsZero(o.Rules[i]) { // not required
+			continue
+		}
+
+		if o.Rules[i] != nil {
+			if err := o.Rules[i].Validate(formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("createOrganizationAdaptivePolicyAclOK" + "." + "rules" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("createOrganizationAdaptivePolicyAclOK" + "." + "rules" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
+func (o *CreateOrganizationAdaptivePolicyACLOKBody) validateUpdatedAt(formats strfmt.Registry) error {
+	if swag.IsZero(o.UpdatedAt) { // not required
+		return nil
+	}
+
+	if err := validate.FormatOf("createOrganizationAdaptivePolicyAclOK"+"."+"updatedAt", "body", "date-time", o.UpdatedAt.String(), formats); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// ContextValidate validate this create organization adaptive policy ACL o k body based on the context it is used
+func (o *CreateOrganizationAdaptivePolicyACLOKBody) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	var res []error
+
+	if err := o.contextValidateRules(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (o *CreateOrganizationAdaptivePolicyACLOKBody) contextValidateRules(ctx context.Context, formats strfmt.Registry) error {
+
+	for i := 0; i < len(o.Rules); i++ {
+
+		if o.Rules[i] != nil {
+			if err := o.Rules[i].ContextValidate(ctx, formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("createOrganizationAdaptivePolicyAclOK" + "." + "rules" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("createOrganizationAdaptivePolicyAclOK" + "." + "rules" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *CreateOrganizationAdaptivePolicyACLOKBody) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *CreateOrganizationAdaptivePolicyACLOKBody) UnmarshalBinary(b []byte) error {
+	var res CreateOrganizationAdaptivePolicyACLOKBody
+	if err := swag.ReadJSON(b, &res); err != nil {
+		return err
+	}
+	*o = res
+	return nil
+}
+
+/*
+CreateOrganizationAdaptivePolicyACLOKBodyRulesItems0 create organization adaptive policy ACL o k body rules items0
+swagger:model CreateOrganizationAdaptivePolicyACLOKBodyRulesItems0
+*/
+type CreateOrganizationAdaptivePolicyACLOKBodyRulesItems0 struct {
+
+	// Destination port
+	DstPort string `json:"dstPort,omitempty"`
+
+	// 'allow' or 'deny' traffic specified by this rule
+	Policy string `json:"policy,omitempty"`
+
+	// The type of protocol
+	Protocol string `json:"protocol,omitempty"`
+
+	// Source port
+	SrcPort string `json:"srcPort,omitempty"`
+}
+
+// Validate validates this create organization adaptive policy ACL o k body rules items0
+func (o *CreateOrganizationAdaptivePolicyACLOKBodyRulesItems0) Validate(formats strfmt.Registry) error {
+	return nil
+}
+
+// ContextValidate validates this create organization adaptive policy ACL o k body rules items0 based on context it is used
+func (o *CreateOrganizationAdaptivePolicyACLOKBodyRulesItems0) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	return nil
+}
+
+// MarshalBinary interface implementation
+func (o *CreateOrganizationAdaptivePolicyACLOKBodyRulesItems0) MarshalBinary() ([]byte, error) {
+	if o == nil {
+		return nil, nil
+	}
+	return swag.WriteJSON(o)
+}
+
+// UnmarshalBinary interface implementation
+func (o *CreateOrganizationAdaptivePolicyACLOKBodyRulesItems0) UnmarshalBinary(b []byte) error {
+	var res CreateOrganizationAdaptivePolicyACLOKBodyRulesItems0
 	if err := swag.ReadJSON(b, &res); err != nil {
 		return err
 	}

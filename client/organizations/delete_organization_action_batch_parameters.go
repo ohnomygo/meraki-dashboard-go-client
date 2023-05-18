@@ -61,10 +61,16 @@ DeleteOrganizationActionBatchParams contains all the parameters to send to the A
 */
 type DeleteOrganizationActionBatchParams struct {
 
-	// ActionBatchID.
+	/* ActionBatchID.
+
+	   Action batch ID
+	*/
 	ActionBatchID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

@@ -64,7 +64,10 @@ type CreateOrganizationSamlRoleParams struct {
 	// CreateOrganizationSamlRole.
 	CreateOrganizationSamlRole CreateOrganizationSamlRoleBody
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

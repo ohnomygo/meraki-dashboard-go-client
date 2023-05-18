@@ -61,10 +61,16 @@ GetNetworkApplianceVlanParams contains all the parameters to send to the API end
 */
 type GetNetworkApplianceVlanParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// VlanID.
+	/* VlanID.
+
+	   Vlan ID
+	*/
 	VlanID string
 
 	timeout    time.Duration

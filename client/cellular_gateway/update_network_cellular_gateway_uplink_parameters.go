@@ -61,7 +61,10 @@ UpdateNetworkCellularGatewayUplinkParams contains all the parameters to send to 
 */
 type UpdateNetworkCellularGatewayUplinkParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkCellularGatewayUplink.

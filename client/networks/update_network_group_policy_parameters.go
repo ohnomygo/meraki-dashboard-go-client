@@ -61,10 +61,16 @@ UpdateNetworkGroupPolicyParams contains all the parameters to send to the API en
 */
 type UpdateNetworkGroupPolicyParams struct {
 
-	// GroupPolicyID.
+	/* GroupPolicyID.
+
+	   Group policy ID
+	*/
 	GroupPolicyID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkGroupPolicy.

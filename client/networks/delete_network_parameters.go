@@ -61,7 +61,10 @@ DeleteNetworkParams contains all the parameters to send to the API endpoint
 */
 type DeleteNetworkParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

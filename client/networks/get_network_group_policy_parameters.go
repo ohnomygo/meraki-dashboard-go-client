@@ -61,10 +61,16 @@ GetNetworkGroupPolicyParams contains all the parameters to send to the API endpo
 */
 type GetNetworkGroupPolicyParams struct {
 
-	// GroupPolicyID.
+	/* GroupPolicyID.
+
+	   Group policy ID
+	*/
 	GroupPolicyID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

@@ -61,7 +61,10 @@ GetOrganizationBrandingPoliciesPrioritiesParams contains all the parameters to s
 */
 type GetOrganizationBrandingPoliciesPrioritiesParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

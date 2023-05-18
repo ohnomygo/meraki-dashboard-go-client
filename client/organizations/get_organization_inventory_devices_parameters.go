@@ -92,7 +92,10 @@ type GetOrganizationInventoryDevicesParams struct {
 	*/
 	OrderNumbers []string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* PerPage.

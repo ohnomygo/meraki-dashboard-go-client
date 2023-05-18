@@ -62,10 +62,16 @@ GetNetworkWirelessClientLatencyHistoryParams contains all the parameters to send
 */
 type GetNetworkWirelessClientLatencyHistoryParams struct {
 
-	// ClientID.
+	/* ClientID.
+
+	   Client ID
+	*/
 	ClientID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* Resolution.

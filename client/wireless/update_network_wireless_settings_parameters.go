@@ -61,7 +61,10 @@ UpdateNetworkWirelessSettingsParams contains all the parameters to send to the A
 */
 type UpdateNetworkWirelessSettingsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkWirelessSettings.

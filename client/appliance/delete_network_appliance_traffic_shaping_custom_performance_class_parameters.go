@@ -61,10 +61,16 @@ DeleteNetworkApplianceTrafficShapingCustomPerformanceClassParams contains all th
 */
 type DeleteNetworkApplianceTrafficShapingCustomPerformanceClassParams struct {
 
-	// CustomPerformanceClassID.
+	/* CustomPerformanceClassID.
+
+	   Custom performance class ID
+	*/
 	CustomPerformanceClassID string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

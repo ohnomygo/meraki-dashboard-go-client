@@ -61,10 +61,16 @@ GetOrganizationLicenseParams contains all the parameters to send to the API endp
 */
 type GetOrganizationLicenseParams struct {
 
-	// LicenseID.
+	/* LicenseID.
+
+	   License ID
+	*/
 	LicenseID string
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

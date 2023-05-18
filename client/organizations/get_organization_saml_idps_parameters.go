@@ -61,7 +61,10 @@ GetOrganizationSamlIdpsParams contains all the parameters to send to the API end
 */
 type GetOrganizationSamlIdpsParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

@@ -61,10 +61,16 @@ GetDeviceLiveToolsPingDeviceParams contains all the parameters to send to the AP
 */
 type GetDeviceLiveToolsPingDeviceParams struct {
 
-	// ID.
+	/* ID.
+
+	   Id
+	*/
 	ID string
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

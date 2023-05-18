@@ -61,7 +61,10 @@ GetOrganizationSmApnsCertParams contains all the parameters to send to the API e
 */
 type GetOrganizationSmApnsCertParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	timeout    time.Duration

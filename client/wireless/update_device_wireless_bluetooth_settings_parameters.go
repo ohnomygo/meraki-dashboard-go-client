@@ -61,7 +61,10 @@ UpdateDeviceWirelessBluetoothSettingsParams contains all the parameters to send 
 */
 type UpdateDeviceWirelessBluetoothSettingsParams struct {
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	// UpdateDeviceWirelessBluetoothSettings.

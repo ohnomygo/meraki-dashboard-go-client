@@ -61,7 +61,10 @@ UpdateNetworkApplianceVlansSettingsParams contains all the parameters to send to
 */
 type UpdateNetworkApplianceVlansSettingsParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceVlansSettings.

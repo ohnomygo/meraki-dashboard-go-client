@@ -62,7 +62,10 @@ GetNetworkClientTrafficHistoryParams contains all the parameters to send to the 
 */
 type GetNetworkClientTrafficHistoryParams struct {
 
-	// ClientID.
+	/* ClientID.
+
+	   Client ID
+	*/
 	ClientID string
 
 	/* EndingBefore.
@@ -71,7 +74,10 @@ type GetNetworkClientTrafficHistoryParams struct {
 	*/
 	EndingBefore *string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* PerPage.

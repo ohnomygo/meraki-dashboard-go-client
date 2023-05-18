@@ -68,7 +68,10 @@ type GetNetworkWirelessClientConnectivityEventsParams struct {
 	*/
 	Band *string
 
-	// ClientID.
+	/* ClientID.
+
+	   Client ID
+	*/
 	ClientID string
 
 	/* DeviceSerial.
@@ -89,7 +92,10 @@ type GetNetworkWirelessClientConnectivityEventsParams struct {
 	*/
 	IncludedSeverities []string
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	/* PerPage.

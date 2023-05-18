@@ -64,7 +64,10 @@ type CreateNetworkMqttBrokerParams struct {
 	// CreateNetworkMqttBroker.
 	CreateNetworkMqttBroker CreateNetworkMqttBrokerBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

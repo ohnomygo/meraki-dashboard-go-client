@@ -61,10 +61,16 @@ DeleteNetworkAppliancePrefixesDelegatedStaticParams contains all the parameters 
 */
 type DeleteNetworkAppliancePrefixesDelegatedStaticParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
-	// StaticDelegatedPrefixID.
+	/* StaticDelegatedPrefixID.
+
+	   Static delegated prefix ID
+	*/
 	StaticDelegatedPrefixID string
 
 	timeout    time.Duration

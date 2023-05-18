@@ -62,7 +62,10 @@ GetOrganizationClientsOverviewParams contains all the parameters to send to the 
 */
 type GetOrganizationClientsOverviewParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	/* T0.

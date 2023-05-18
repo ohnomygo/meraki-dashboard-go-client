@@ -67,7 +67,10 @@ type GetDeviceCameraAnalyticsRecentParams struct {
 	*/
 	ObjectType *string
 
-	// Serial.
+	/* Serial.
+
+	   Serial
+	*/
 	Serial string
 
 	timeout    time.Duration

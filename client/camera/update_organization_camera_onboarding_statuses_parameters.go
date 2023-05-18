@@ -61,7 +61,10 @@ UpdateOrganizationCameraOnboardingStatusesParams contains all the parameters to 
 */
 type UpdateOrganizationCameraOnboardingStatusesParams struct {
 
-	// OrganizationID.
+	/* OrganizationID.
+
+	   Organization ID
+	*/
 	OrganizationID string
 
 	// UpdateOrganizationCameraOnboardingStatuses.

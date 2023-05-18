@@ -64,7 +64,10 @@ type CreateNetworkMerakiAuthUserParams struct {
 	// CreateNetworkMerakiAuthUser.
 	CreateNetworkMerakiAuthUser CreateNetworkMerakiAuthUserBody
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	timeout    time.Duration

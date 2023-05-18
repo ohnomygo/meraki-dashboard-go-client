@@ -61,7 +61,10 @@ UpdateNetworkTrafficAnalysisParams contains all the parameters to send to the AP
 */
 type UpdateNetworkTrafficAnalysisParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkTrafficAnalysis.

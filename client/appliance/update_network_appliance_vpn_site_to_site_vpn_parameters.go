@@ -61,7 +61,10 @@ UpdateNetworkApplianceVpnSiteToSiteVpnParams contains all the parameters to send
 */
 type UpdateNetworkApplianceVpnSiteToSiteVpnParams struct {
 
-	// NetworkID.
+	/* NetworkID.
+
+	   Network ID
+	*/
 	NetworkID string
 
 	// UpdateNetworkApplianceVpnSiteToSiteVpn.
